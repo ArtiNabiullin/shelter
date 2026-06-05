@@ -8,52 +8,60 @@
   </head>
   <body>
     <!-- Header start -->
-    <header class="header">
-      <div class="logo">
-        <p class="title">cozy house</p>
-        <p class="subtitle">shelter for pets in boston</p>
-      </div>
-      <div class="nav">
-        <ul class="nav__items">
-          <li class="nav__item">
-            <a href="pets.html" class="nav__link">about the shelter</a>
-          </li>
-          <li class="nav__item">
-            <a href="#" class="nav__link">our pets</a>
-          </li>
-          <li class="nav__item">
-            <a href="#" class="nav__link">help the shelter</a>
-          </li>
-          <li class="nav__item">
-            <a href="#" class="nav__link">contacts</a>
-          </li>
-        </ul>
-      </div>
-    </header>
-    <!-- Header end -->
-    <!-- Main start -->
-    <main>
+    <div class="start-screen-wrapper">
+      <header class="header">
+        <div class="header__container">
+          <div class="header__logo">
+            <p class="header__title">cozy house</p>
+            <p class="header__subtitle">shelter for pets in Boston</p>
+          </div>
+          <div class="nav">
+            <ul class="nav__items">
+              <li class="nav__item">
+                <a href="pets.html" class="nav__link">about the shelter</a>
+              </li>
+              <li class="nav__item">
+                <a href="#pets" class="nav__link">our pets</a>
+              </li>
+              <li class="nav__item">
+                <a href="#help" class="nav__link">help the shelter</a>
+              </li>
+              <li class="nav__item">
+                <a href="#footer" class="nav__link">contacts</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </header>
       <!-- Section startscreen start -->
-      <section class="startscreen">
+      <section class="startscreen" id="startscreen">
         <div class="startscreen__content">
           <div class="startscreen__information">
-            <h2 class="startscreen__heading">not only people need a house</h2>
+            <h2 class="startscreen__heading">
+              not only people<br />need a house
+            </h2>
             <p class="startscreen__subheading">
               we offer to give a chance to a little and nice puppy with an
-              extremely wide and open heart. He or she will love you more than
-              anybody else in the world, you will see!
+              extremely<br />wide and open heart. He or she will love you more
+              than anybody else<br />in the world, you will see!
             </p>
             <a href="pets.html" class="startscreen__button">make a friend</a>
           </div>
           <div class="startscreen__image">
             <img
-              src="./img/start-screen-puppy.jpg"
+              src="./img/start-screen-puppy.png"
               alt="start-screen-puppy"
               class="startscreen__puppy_image"
             />
           </div>
         </div>
       </section>
+      <!-- Section startscreen end -->
+    </div>
+    <!-- Header end -->
+    <!-- Main start -->
+    <main>
+      <!-- Section about start -->
       <section class="about">
         <div class="about__content">
           <div class="about__image">
@@ -82,9 +90,8 @@
           </div>
         </div>
       </section>
-      <!-- Section startscreen end -->
       <!-- Section pets start -->
-      <section class="pets">
+      <section class="pets" id="pets">
         <div class="pets__content">
           <h3 class="pets__heading">our friends who are looking for a house</h3>
           <div class="pets__slider">
@@ -133,7 +140,7 @@
       </section>
       <!-- Section pets end -->
       <!-- Section help start -->
-      <section class="help">
+      <section class="help" id="help">
         <div class="help__content">
           <h3 class="help__heading">how you can help our shelter</h3>
           <div class="help__lists">
@@ -214,7 +221,7 @@
       </section>
       <!-- Section help end -->
       <!-- Section donation start -->
-      <section class="donation">
+      <section class="donation" id="donation">
         <div class="donation__content">
           <div class="donation__image">
             <img
@@ -242,7 +249,7 @@
     </main>
     <!-- Main end -->
     <!-- Footer start -->
-    <footer>
+    <footer class="footer" id="footer">
       <div class="footer__content">
         <div class="footer__contacts">
           <h3 class="footer__title">for questions and suggestions</h3>

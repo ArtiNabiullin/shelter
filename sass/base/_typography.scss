@@ -1,0 +1,50 @@
+// font
+$font-family-title: "Georgia", "Arial", sans-serif;
+$font-family-subtitle: "Arial", "Georgia", sans-serif;
+$font-size-h2: 45px;
+$font-size-h3: 35px;
+$font-size-h4: 20px;
+$font-size-h5: 15px;
+$line-height-h3: 130%;
+$line-height-h4: 115%;
+$line-height-h5: 110%;
+$letter-spacing: 0.06em;
+$font-weight: 400;
+$text-transform: uppercase;
+$text-decoration: none;
+
+$typography-styles: (
+  "h2": (
+    "font-family": $font-family-title,
+    "font-size": $font-size-h2,
+    "font-weight": $font-weight,
+    "line-height": $line-height-h3,
+  ),
+  "h3": (
+    "font-family": $font-family-title,
+    "font-size": $font-size-h3,
+    "font-weight": $font-weight,
+    "line-height": $line-height-h3,
+    "letter-spacing": $letter-spacing,
+  ),
+  "h4": (
+    "font-family": $font-family-subtitle,
+    "font-size": $font-size-h4,
+    "font-weight": $font-weight,
+    "line-height": $line-height-h4,
+    "letter-spacing": $letter-spacing,
+  ),
+  "h5": (
+    "font-family": $font-family-subtitle,
+    "font-size": $font-size-h5,
+    "font-weight": $font-weight,
+    "line-height": $line-height-h5,
+  ),
+  "button": (
+    "font-family": $font-family-subtitle,
+    "font-size": $font-size-h5,
+    "font-weight": $font-weight,
+    "line-height": $line-height-h3,
+    "letter-spacing": $letter-spacing,
+  ),
+);

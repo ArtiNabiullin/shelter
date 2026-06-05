@@ -1,1 +1,12 @@
-@use "./base/normalize";
+//base
+@import "./base/reset";
+@import "./base/typography";
+
+//abstracts
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
+
+//layout
+@import "./layout/header";
+@import "./layout/footer";
+@import "./layout/navigation";

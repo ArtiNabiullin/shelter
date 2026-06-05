@@ -1,0 +1,16 @@
+.nav {
+  .nav__items {
+    @include flex($justify: space-between, $gap: 35px);
+  }
+  .nav__link {
+    font-family: $font-family-subtitle;
+    font-weight: $font-weight;
+    font-size: $font-size-h5;
+    line-height: 160%;
+    color: $color-text-white;
+    text-decoration: $text-decoration;
+  }
+  ::first-letter {
+    text-transform: $text-transform;
+  }
+}
