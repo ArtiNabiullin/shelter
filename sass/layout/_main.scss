@@ -1,6 +1,10 @@
-.main__section {
+section {
+  margin: 0;
+}
+
+.main__content {
   max-width: $max-width-1200;
-  margin: $margin-sections;
+  margin: $margin-center;
 }
 ::first-letter {
   text-transform: $text-transform;
@@ -11,6 +15,7 @@
 }
 
 .about {
+  padding: $padding-center;
   background-color: $color-background-white;
   .about__content {
     @include flex($gap: 120px);
@@ -19,7 +24,31 @@
       @include flex($align: start, $flex: column, $gap: 25px);
     }
     .about__subheading {
+      color: $color-text-dark;
       @include font("h5");
+    }
+  }
+}
+
+.pets {
+  padding: $padding-center;
+  background-color: $color-background-gray;
+  .pets__content {
+    @include flex($flex: column, $gap: 60px);
+    .pets__heading {
+      text-align: $text-align;
+    }
+    .pets__button {
+      @include font("button");
+      color: $color-text-dark;
+      text-decoration: $text-decoration;
+      padding: $padding-button;
+      background-color: $color-primary;
+      border-radius: $border-radius-button;
+      &:hover {
+        transition: background-color 0.3s ease;
+        background-color: $color-primary-light;
+      }
     }
   }
 }

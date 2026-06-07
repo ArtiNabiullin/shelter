@@ -10,6 +10,7 @@ $line-height-h4: 115%;
 $line-height-h5: 160%;
 $letter-spacing: 0.06em;
 $font-weight: 400;
+$text-align: center;
 $text-transform: uppercase;
 $text-decoration: none;
 
@@ -28,11 +29,11 @@ $typography-styles: (
     "letter-spacing": $letter-spacing,
   ),
   "h4": (
-    "font-family": $font-family-subtitle,
+    "font-family": $font-family-title,
     "font-size": $font-size-h4,
     "font-weight": $font-weight,
-    "line-height": $line-height-h4,
     "letter-spacing": $letter-spacing,
+    "text-align": $text-align,
   ),
   "h5": (
     "font-family": $font-family-subtitle,
@@ -41,7 +42,7 @@ $typography-styles: (
     "line-height": $line-height-h5,
   ),
   "button": (
-    "font-family": $font-family-subtitle,
+    "font-family": $font-family-title,
     "font-size": $font-size-h5,
     "font-weight": $font-weight,
     "line-height": $line-height-h3,
