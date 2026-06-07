@@ -11,6 +11,7 @@
     @include flex($justify: space-between, $gap: 0);
     .header__logo {
       @include flex($flex: column);
+      text-decoration: $text-decoration;
       .header__title {
         @include font("h3");
         color: $color-primary;
@@ -60,8 +61,10 @@
       padding: $padding-button;
       background-color: $color-primary;
       border-radius: $border-radius-button;
+      &:hover {
+        transition: background-color 0.3s ease;
+        background-color: $color-primary-light;
+      }
     }
-  }
-  .startscreen__puppy_image {
   }
 }

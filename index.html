@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./sass/style.css" />
+    <link rel="icon" type="image/jpg" href="./img/about-pets.jpg" />
     <title>Shelter</title>
   </head>
   <body>
@@ -11,17 +12,17 @@
     <div class="start-screen-wrapper">
       <header class="header">
         <div class="header__container">
-          <div class="header__logo">
-            <p class="header__title">cozy house</p>
-            <p class="header__subtitle">shelter for pets in Boston</p>
-          </div>
+          <a href="index.html" class="header__logo">
+            <span class="header__title">cozy house</span>
+            <span class="header__subtitle">shelter for pets in Boston</span>
+          </a>
           <div class="nav">
             <ul class="nav__items">
-              <li class="nav__item">
-                <a href="pets.html" class="nav__link">about the shelter</a>
+              <li class="nav__item is-active">
+                <a href="#about" class="nav__link">about the shelter</a>
               </li>
               <li class="nav__item">
-                <a href="#pets" class="nav__link">our pets</a>
+                <a href="pets.html" class="nav__link">our pets</a>
               </li>
               <li class="nav__item">
                 <a href="#help" class="nav__link">help the shelter</a>
@@ -45,7 +46,7 @@
               extremely<br />wide and open heart. He or she will love you more
               than anybody else<br />in the world, you will see!
             </p>
-            <a href="pets.html" class="startscreen__button">make a friend</a>
+            <a href="#pets" class="startscreen__button">make a friend</a>
           </div>
           <div class="startscreen__image">
             <img
@@ -62,7 +63,7 @@
     <!-- Main start -->
     <main>
       <!-- Section about start -->
-      <section class="about">
+      <section class="about main__section" id="about">
         <div class="about__content">
           <div class="about__image">
             <img
@@ -72,7 +73,9 @@
             />
           </div>
           <div class="about__information">
-            <h3 class="about__heading">about the shelter “Cozy House”</h3>
+            <h3 class="about__heading main__title">
+              about the shelter<br />“Cozy House”
+            </h3>
             <p class="about__subheading">
               currently we have 121 dogs and 342 cats on our hands and
               statistics show that only 20% of them will find a family. The
@@ -91,9 +94,11 @@
         </div>
       </section>
       <!-- Section pets start -->
-      <section class="pets" id="pets">
+      <section class="pets main__section" id="pets">
         <div class="pets__content">
-          <h3 class="pets__heading">our friends who are looking for a house</h3>
+          <h3 class="pets__heading main__title">
+            our friends who are looking for a house
+          </h3>
           <div class="pets__slider">
             <button
               class="pets__buttons"
@@ -140,9 +145,11 @@
       </section>
       <!-- Section pets end -->
       <!-- Section help start -->
-      <section class="help" id="help">
+      <section class="help main__section" id="help">
         <div class="help__content">
-          <h3 class="help__heading">how you can help our shelter</h3>
+          <h3 class="help__heading main__title">
+            how you can help our shelter
+          </h3>
           <div class="help__lists">
             <div class="help__list">
               <img
@@ -221,7 +228,7 @@
       </section>
       <!-- Section help end -->
       <!-- Section donation start -->
-      <section class="donation" id="donation">
+      <section class="donation main__section" id="donation">
         <div class="donation__content">
           <div class="donation__image">
             <img
@@ -231,7 +238,9 @@
             />
           </div>
           <div class="donation__description">
-            <h3 class="donation__heading">you can also make a donation</h3>
+            <h3 class="donation__heading main__title">
+              you can also make a donation
+            </h3>
             <h4 class="donation__subheading">
               name of the bank / type of bank account
             </h4>
@@ -252,7 +261,9 @@
     <footer class="footer" id="footer">
       <div class="footer__content">
         <div class="footer__contacts">
-          <h3 class="footer__title">for questions and suggestions</h3>
+          <h3 class="footer__title footer__title">
+            for questions and suggestions
+          </h3>
           <div class="footer__mail">
             <img
               src="./img/svg/icon-email.svg"
@@ -271,7 +282,9 @@
           </div>
         </div>
         <div class="footer__locations">
-          <h3 class="footer__title">we are waiting for your visit</h3>
+          <h3 class="footer__title footer__title">
+            we are waiting for your visit
+          </h3>
           <div class="footer__boston">
             <img
               src="./img/svg/icon-marker.svg"

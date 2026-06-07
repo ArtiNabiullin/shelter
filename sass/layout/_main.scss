@@ -1,0 +1,25 @@
+.main__section {
+  max-width: $max-width-1200;
+  margin: $margin-sections;
+}
+::first-letter {
+  text-transform: $text-transform;
+}
+.main__title {
+  @include font("h3");
+  color: $color-text-graphite;
+}
+
+.about {
+  background-color: $color-background-white;
+  .about__content {
+    @include flex($gap: 120px);
+    .about__information {
+      max-width: 430px;
+      @include flex($align: start, $flex: column, $gap: 25px);
+    }
+    .about__subheading {
+      @include font("h5");
+    }
+  }
+}

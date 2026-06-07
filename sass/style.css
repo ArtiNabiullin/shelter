@@ -357,6 +357,7 @@ textarea {
   align-items: center;
   flex-direction: column;
   gap: 10px;
+  text-decoration: none;
 }
 .header .header__container .header__logo .header__title {
   font-family: "Georgia", "Arial", sans-serif;
@@ -407,7 +408,7 @@ textarea {
   font-family: "Arial", "Georgia", sans-serif;
   font-size: 15px;
   font-weight: 400;
-  line-height: 110%;
+  line-height: 160%;
   color: #cdcdcd;
 }
 .startscreen .startscreen__information .startscreen__button {
@@ -422,6 +423,54 @@ textarea {
   background-color: #f1cdb3;
   border-radius: 100px;
 }
+.startscreen .startscreen__information .startscreen__button:hover {
+  transition: background-color 0.3s ease;
+  background-color: #fddcc4;
+}
+
+.main__section {
+  max-width: 1200px;
+  margin: 80px auto 100px auto;
+}
+
+::first-letter {
+  text-transform: uppercase;
+}
+
+.main__title {
+  font-family: "Georgia", "Arial", sans-serif;
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+
+.about {
+  background-color: #ffffff;
+}
+.about .about__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 120px;
+}
+.about .about__content .about__information {
+  max-width: 430px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  gap: 25px;
+}
+.about .about__content .about__subheading {
+  font-family: "Arial", "Georgia", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 160%;
+}
+
 .nav .nav__items {
   display: flex;
   justify-content: space-between;
@@ -429,13 +478,37 @@ textarea {
   flex-direction: row;
   gap: 35px;
 }
+.nav .nav__items .is-active {
+  color: #ffffff;
+}
+.nav .nav__items .is-active::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  transition: background-color 0.3s ease;
+  background-color: #f1cdb3;
+}
 .nav .nav__link {
   font-family: "Arial", "Georgia", sans-serif;
   font-weight: 400;
   font-size: 15px;
   line-height: 160%;
+  color: #cdcdcd;
+  -webkit-text-decoration: #ffffff;
+          text-decoration: #ffffff;
+}
+.nav .nav__link:hover {
+  transition: color 0.3s ease;
   color: #ffffff;
-  text-decoration: none;
+}
+.nav .nav__link:active::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  transition: background-color 0.3s ease;
+  background-color: #f1cdb3;
 }
 .nav ::first-letter {
   text-transform: uppercase;
