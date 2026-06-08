@@ -52,3 +52,59 @@ section {
     }
   }
 }
+
+.help {
+  padding: $padding-center;
+  background-color: $color-background-white;
+  .help__content {
+    @include flex($flex: column, $gap: 60px);
+    .help__heading {
+      text-align: $text-align;
+    }
+    .help__lists {
+      @include flex($gap: 55px 120px);
+      .help__list {
+        @include flex($flex: column, $gap: 30px);
+        .help__list_text {
+          @include font("h4");
+          color: $color-text-black;
+        }
+      }
+    }
+  }
+}
+
+.donation {
+  padding: $padding-center;
+  background-color: $color-background-gray;
+  .donation__content {
+    @include flex($gap: 30px);
+    .donation__description {
+      @include flex($flex: column, $align: start, $gap: 20px);
+      max-width: 380px;
+      .donation__subheading {
+        font-family: $font-family-title;
+        font-weight: $font-weight;
+        font-size: $font-size-h5;
+        letter-spacing: $letter-spacing;
+        color: $color-text-black;
+        line-height: 110%;
+      }
+      .donation__credit {
+        background-color: $color-primary;
+        border-radius: $border-radius-donation;
+        padding: $padding-donation;
+        max-width: 349px;
+        width: 100%;
+      }
+      .donation__information {
+        font-family: $font-family-subtitle;
+        font-weight: $font-weight;
+        font-style: $font-style;
+        font-size: 12px;
+        color: $color-text-dark-m;
+        line-height: 150%;
+      }
+    }
+  }
+}

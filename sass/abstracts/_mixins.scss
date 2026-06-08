@@ -1,15 +1,22 @@
-@mixin flex($justify: center, $align: center, $flex: row, $gap: 10px) {
+@mixin flex(
+  $justify: center,
+  $align: center,
+  $flex: row,
+  $gap: 10px,
+  $wrap: wrap
+) {
   display: flex;
   justify-content: $justify;
   align-items: $align;
   flex-direction: $flex;
+  flex-wrap: $wrap;
   gap: $gap;
 }
 
-@mixin grid($grid-gap: 30px) {
+@mixin grid($grid-gap: 55px 120px) {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   gap: $grid-gap;
 }
 
