@@ -75,7 +75,7 @@ section {
 }
 
 .donation {
-  padding: $padding-center;
+  padding: 90px 0 90px;
   background-color: $color-background-gray;
   .donation__content {
     @include flex($gap: 30px);

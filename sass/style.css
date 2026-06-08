@@ -338,12 +338,12 @@ textarea {
 }
 
 .start-screen-wrapper {
-  background-image: linear-gradient(to right, #5b483a, #262425, #211f20), url(/shelter/img/noise_transparent.jpg);
+  background: url(/img/noise_transparent@2x.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%), #211f20;
 }
 
 .header .header__container {
   max-width: 1200px;
-  padding-top: 30px;
+  padding-top: 25px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -382,7 +382,7 @@ textarea {
 
 .startscreen .startscreen__content {
   max-width: 1200px;
-  margin: 68px auto 0 auto;
+  margin: 84px auto 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -396,7 +396,8 @@ textarea {
   align-items: start;
   flex-direction: column;
   flex-wrap: wrap;
-  gap: 42px;
+  gap: 40px;
+  padding-bottom: 110px;
 }
 .startscreen .startscreen__information .startscreen__heading {
   font-family: "Georgia", "Arial", sans-serif;
@@ -556,7 +557,7 @@ section {
 }
 
 .donation {
-  padding: 80px 0 100px;
+  padding: 90px 0 90px;
   background-color: #f6f6f6;
 }
 .donation .donation__content {
@@ -598,6 +599,73 @@ section {
   font-size: 12px;
   color: #b2b2b2;
   line-height: 150%;
+}
+
+.footer {
+  background: url(/img/noise_transparent@2x.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%), #211f20;
+}
+.footer .footer__wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer__content {
+  padding-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 160px;
+}
+.footer__content .footer__table_contact {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.footer__content .footer__table_location {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 31px;
+}
+
+.footer__title {
+  font-family: "Georgia", "Arial", sans-serif;
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+}
+
+.footer__card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.footer__card .footer__text {
+  font-family: "Georgia", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: 0.06em;
+  color: #545454;
+  line-height: 115%;
+  color: #f1cdb3;
+  text-decoration: none;
+}
+.footer__card .footer__text:hover {
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
 }
 
 .nav .nav__items {

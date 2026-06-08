@@ -1,12 +1,13 @@
 .start-screen-wrapper {
-  background-image:
-    linear-gradient(to right, #5b483a, #262425, #211f20),
-    url(/shelter/img/noise_transparent.jpg);
+  background:
+    url(/img/noise_transparent@2x.png),
+    radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%),
+    #211f20;
 }
 .header {
   .header__container {
     max-width: $max-width-1200;
-    padding-top: 30px;
+    padding-top: 25px;
     margin: $margin-center;
     @include flex($justify: space-between, $gap: 0);
     .header__logo {
@@ -33,16 +34,17 @@
 .startscreen {
   .startscreen__content {
     max-width: $max-width-1200;
-    margin: 68px auto 0 auto;
+    margin: 84px auto 0 auto;
     @include flex($justify: space-between, $gap: 42px);
   }
   .startscreen__information {
     @include flex(
       $justify: space-between,
       $align: start,
-      $gap: 42px,
+      $gap: 40px,
       $flex: column
     );
+    padding-bottom: 110px;
     .startscreen__heading {
       @include font("h2");
       color: $color-text-white;
