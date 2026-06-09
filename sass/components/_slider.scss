@@ -4,14 +4,15 @@
     @include flex($gap: 90px);
     .pets__card {
       background-color: $color-background-snow;
+      transition: box-shadow 0.3s ease;
       @include flex($flex: column, $gap: 30px);
+      border-radius: $border-radius-donation;
+      .pets__link {
+        transition: background-color 0.3s ease;
+      }
       &:hover {
         cursor: pointer;
         box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
-        transition: background-color 0.3s ease;
-        .pets__card_image {
-          background-color: $color-background-gray;
-        }
         .pets__link {
           background-color: $color-primary-light;
         }

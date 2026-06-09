@@ -9,40 +9,44 @@
   </head>
   <body>
     <!-- Header start -->
-    <header class="header">
-      <div class="header__container">
-        <a href="index.html" class="header__logo">
-          <span class="header__title">cozy house</span>
-          <span class="header__subtitle">shelter for pets in Boston</span>
-        </a>
-        <div class="nav">
-          <ul class="nav__items">
-            <li class="nav__item is-active">
-              <a href="#about" class="nav__link">about the shelter</a>
-            </li>
-            <li class="nav__item">
-              <a href="pets.html" class="nav__link">our pets</a>
-            </li>
-            <li class="nav__item">
-              <a href="#help" class="nav__link">help the shelter</a>
-            </li>
-            <li class="nav__item">
-              <a href="#footer" class="nav__link">contacts</a>
-            </li>
-          </ul>
+    <div class="pets__wrapper">
+      <header class="header__pets">
+        <div class="pets__container">
+          <a href="index.html" class="pets__logo">
+            <span class="pets__title">cozy house</span>
+            <span class="pets__subtitle">shelter for pets in Boston</span>
+          </a>
+          <div class="nav__pets">
+            <ul class="pets__items">
+              <li class="pets__item">
+                <a href="#about" class="pets__link">about the shelter</a>
+              </li>
+              <li class="pets__item is-active">
+                <a href="pets.html" class="pets__link">our pets</a>
+              </li>
+              <li class="pets__item">
+                <a href="#help" class="pets__link">help the shelter</a>
+              </li>
+              <li class="pets__item">
+                <a href="#footer" class="pets__link">contacts</a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </header>
+      </header>
+    </div>
     <!-- Header end -->
     <!-- Main start -->
     <main class="main">
       <section class="animals">
-        <div class="animals__content">
-          <h3 class="pets__heading">our friends who are looking for a house</h3>
+        <div class="animals__content main__content">
+          <h3 class="pets__heading main__title">
+            our friends who<br />are looking for a house
+          </h3>
           <div class="pets__cards">
             <div class="pets__card">
               <img
-                src="./img/pets-katrine.jpg"
+                src="./img/pets-katrine.png"
                 alt="pets-katrine"
                 class="pets__card_image"
               />
@@ -51,7 +55,7 @@
             </div>
             <div class="pets__card">
               <img
-                src=".//img/pets-jennifer.jpg"
+                src=".//img/pets-jennifer.png"
                 alt="pets-jennifer"
                 class="pets__card_image"
               />
@@ -60,7 +64,7 @@
             </div>
             <div class="pets__card">
               <img
-                src="./img/pets-woody.jpg"
+                src="./img/pets-woody.png"
                 alt="pets-woody"
                 class="pets__card_image"
               />
@@ -69,7 +73,7 @@
             </div>
             <div class="pets__card">
               <img
-                src="./img/pets-sophia.jpg"
+                src="./img/pets-sophia.png"
                 alt="pets-sophia"
                 class="pets__card_image"
               />
@@ -78,7 +82,7 @@
             </div>
             <div class="pets__card">
               <img
-                src="./img/pets-timmy.jpg"
+                src="./img/pets-timmy.png"
                 alt="pets-timmy"
                 class="pets__card_image"
               />
@@ -87,7 +91,7 @@
             </div>
             <div class="pets__card">
               <img
-                src="./img/pets-charly.jpg"
+                src="./img/pets-charly.png"
                 alt="pets-charly"
                 class="pets__card_image"
               />
@@ -105,7 +109,7 @@
             </div>
             <div class="pets__card">
               <img
-                src="./img/pets-freddie.jpg"
+                src="./img/pets-freddie.png"
                 alt="pets-freddie"
                 class="pets__card_image"
               />
@@ -114,85 +118,91 @@
             </div>
           </div>
           <div class="animals__buttons">
-            <button
-              class="animals__button"
-              id="leftAll"
-              aria-label="left all"
-            ></button>
-            <button
-              class="animals__button"
-              id="left"
-              aria-label="left"
-            ></button>
-            <button
-              class="animals__button"
-              id="current"
-              aria-label="current"
-            ></button>
-            <button
-              class="animals__button"
-              id="right"
-              aria-label="right"
-            ></button>
-            <button
-              class="animals__button"
-              id="rightAll"
-              aria-label="right all"
-            ></button>
+            <div class="animals__button animals__button_left">
+              <img src="/img/buttons/btn-all-rigth.svg" alt="btn-all-left" />
+            </div>
+            <div class="animals__button animals__button_left">
+              <img src="/img/buttons/btn-right.svg" alt="btn-left" />
+            </div>
+            <div class="animals__button">1</div>
+            <div class="animals__button">
+              <img src="/img/buttons/btn-right.svg" alt="btn-right" />
+            </div>
+            <div class="animals__button">
+              <img src="/img/buttons/btn-all-rigth.svg" alt="btn-all-right" />
+            </div>
           </div>
         </div>
       </section>
     </main>
     <!-- Main end -->
     <!-- Footer start -->
-    <footer>
-      <div class="footer__content">
-        <div class="footer__contacts">
-          <h3 class="footer__title">for questions and suggestions</h3>
-          <div class="footer__mail">
-            <img
-              src="./img/svg/icon-email.svg"
-              alt="icon-email"
-              class="footer__images"
-            />
-            <h4 class="footer__text">email@shelter.com</h4>
+    <footer class="footer" id="footer">
+      <div class="footer__wrapper">
+        <div class="footer__content">
+          <div class="footer__table footer__table_contact">
+            <h3 class="footer__title">for questions<br />and suggestions</h3>
+            <div class="footer__mail footer__card">
+              <img
+                src="./img/svg/icon-email.svg"
+                alt="icon-email"
+                class="footer__images"
+              />
+              <a href="mailto:email@shelter.com" class="footer__text"
+                >email@shelter.com</a
+              >
+            </div>
+            <div class="footer__phone footer__card">
+              <img
+                src="./img/svg/icon-phone.svg"
+                alt="icon-phone"
+                class="footer__images"
+              />
+              <a href="tel:+136745677554" class="footer__text"
+                >+13 674 567 75 54</a
+              >
+            </div>
           </div>
-          <div class="footer__phone">
-            <img
-              src="./img/svg/icon-phone.svg"
-              alt="icon-phone"
-              class="footer__images"
-            />
-            <h4 class="footer__text">+13 674 567 75 54</h4>
+          <div class="footer__table footer__table_location">
+            <h3 class="footer__title">we are waiting<br />for your visit</h3>
+            <div class="footer__boston footer__card">
+              <img
+                src="./img/svg/icon-marker.svg"
+                alt="icon-marker"
+                class="footer__images"
+              />
+              <a
+                href="https://maps.google.com/?q=1+Central+Street,+Boston"
+                class="footer__text"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                1 Central Street, Boston<br />(entrance from the store)
+              </a>
+            </div>
+            <div class="footer__london footer__card">
+              <img
+                src="./img/svg/icon-marker.svg"
+                alt="icon-marker"
+                class="footer__images"
+              />
+              <a
+                href="https://maps.google.com/?q=18+South+Park,+London"
+                class="footer__text"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                18 South Park, London
+              </a>
+            </div>
           </div>
-        </div>
-        <div class="footer__locations">
-          <h3 class="footer__title">we are waiting for your visit</h3>
-          <div class="footer__boston">
+          <div class="footer__image">
             <img
-              src="./img/svg/icon-marker.svg"
-              alt="icon-marker"
-              class="footer__images"
+              src="./img/footer-puppy.png"
+              alt="footer-puppy"
+              class="footer__image_puppy"
             />
-            <h4 class="footer__text">
-              1 Central Street, Boston (entrance from the store)
-            </h4>
           </div>
-          <div class="footer__london">
-            <img
-              src="./img/svg/icon-marker.svg"
-              alt="icon-marker"
-              class="footer__images"
-            />
-            <h4 class="footer__text">18 South Park, London</h4>
-          </div>
-        </div>
-        <div class="footer__image">
-          <img
-            src="./img/footer-puppy.png"
-            alt="footer-puppy"
-            class="footer__image_puppy"
-          />
         </div>
       </div>
     </footer>

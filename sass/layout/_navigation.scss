@@ -2,7 +2,9 @@
   .nav__items {
     @include flex($justify: space-between, $gap: 35px);
     .is-active {
-      color: $color-text-white;
+      .nav__link {
+        color: $color-text-white;
+      }
       &::after {
         content: "";
         display: block;

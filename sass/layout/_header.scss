@@ -1,8 +1,7 @@
 .start-screen-wrapper {
   background:
     url(/img/noise_transparent@2x.png),
-    radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%),
-    #211f20;
+    radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%), #211f20;
 }
 .header {
   .header__container {
@@ -13,6 +12,10 @@
     .header__logo {
       @include flex($flex: column);
       text-decoration: $text-decoration;
+      &:hover {
+        opacity: 0.6;
+        transition: opacity 0.3s ease;
+      }
       .header__title {
         @include font("h3");
         color: $color-primary;
