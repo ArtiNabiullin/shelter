@@ -467,6 +467,13 @@ section {
   flex-wrap: wrap;
   gap: 120px;
 }
+.about .about__content .about__image:hover {
+  cursor: pointer;
+  border-radius: 50%;
+  transform: scale(1.05);
+  box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 .about .about__content .about__information {
   max-width: 430px;
   display: flex;
@@ -546,6 +553,14 @@ section {
   flex-direction: column;
   flex-wrap: wrap;
   gap: 30px;
+}
+.help .help__content .help__lists .help__list:hover {
+  cursor: pointer;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+.help .help__content .help__lists .help__list:hover .help__list_text {
+  color: #f1cdb3;
 }
 .help .help__content .help__lists .help__list .help__list_text {
   font-family: "Georgia", "Arial", sans-serif;
@@ -652,6 +667,11 @@ section {
   flex-wrap: wrap;
   gap: 20px;
 }
+.footer__card:hover {
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
 .footer__card .footer__text {
   font-family: "Georgia", "Arial", sans-serif;
   font-weight: 400;
@@ -661,11 +681,6 @@ section {
   line-height: 115%;
   color: #f1cdb3;
   text-decoration: none;
-}
-.footer__card .footer__text:hover {
-  cursor: pointer;
-  opacity: 0.6;
-  transition: opacity 0.3s ease;
 }
 
 .nav .nav__items {
@@ -769,4 +784,43 @@ section {
   background-color: #fafafa;
   border-radius: 100px;
   border: 2px solid #fddcc4;
+}
+
+.pets__buttons {
+  width: 52px;
+  height: 52px;
+  border-radius: 100px;
+  border: 2px solid #f1cdb3;
+  background-color: #f6f6f6;
+  cursor: pointer;
+  position: relative;
+}
+.pets__buttons::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 18px;
+  width: 14px;
+  height: 2px;
+  background-color: #545454;
+  transform: translateY(-50%);
+}
+.pets__buttons::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 27px;
+  width: 3px;
+  height: 3px;
+  border-top: 2px solid #545454;
+  border-right: 2px solid #545454;
+  transform: translateY(-50%) rotate(45deg);
+}
+.pets__buttons:hover {
+  background-color: #fddcc4;
+  border-color: #fddcc4;
+}
+
+.pets__buttons_left {
+  transform: rotate(180deg);
 }/*# sourceMappingURL=style.css.map */
