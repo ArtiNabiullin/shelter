@@ -86,7 +86,7 @@
 
 .animals {
   background-color: $color-background-gray;
-  padding: $padding-center;
+  padding: $padding-center-pets;
   .animals__content {
     @include flex($flex: column, $gap: 45px);
     .pets__heading {
@@ -96,6 +96,7 @@
       @include flex($gap: 20px);
       .animals__button {
         @include flex();
+        box-sizing: border-box;
         width: 52px;
         height: 52px;
         border: 2px solid $color-primary;
@@ -111,6 +112,7 @@
       }
     }
     .pets__cards {
+      padding: $padding-animals;
       @include grid();
       .pets__card {
         background-color: $color-background-snow;

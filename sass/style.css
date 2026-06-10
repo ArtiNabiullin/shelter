@@ -422,7 +422,7 @@ textarea {
 }
 .startscreen .startscreen__information .startscreen__button {
   font-family: "Georgia", "Arial", sans-serif;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 400;
   line-height: 130%;
   letter-spacing: 0.06em;
@@ -512,7 +512,7 @@ section {
 }
 .pets .pets__content .pets__button {
   font-family: "Georgia", "Arial", sans-serif;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 400;
   line-height: 130%;
   letter-spacing: 0.06em;
@@ -629,7 +629,7 @@ section {
 }
 
 .footer__content {
-  padding-top: 40px;
+  padding-top: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -784,7 +784,7 @@ section {
 
 .animals {
   background-color: #f6f6f6;
-  padding: 80px 0 100px;
+  padding: 60px 0 100px;
 }
 .animals .animals__content {
   display: flex;
@@ -812,6 +812,7 @@ section {
   flex-direction: row;
   flex-wrap: wrap;
   gap: 10px;
+  box-sizing: border-box;
   width: 52px;
   height: 52px;
   border: 2px solid #f1cdb3;
@@ -826,6 +827,7 @@ section {
   transform: rotate(180deg);
 }
 .animals .animals__content .pets__cards {
+  padding: 15px 0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -863,7 +865,7 @@ section {
 .animals .animals__content .pets__cards .pets__card .pets__link {
   margin-bottom: 30px;
   font-family: "Georgia", "Arial", sans-serif;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 400;
   line-height: 130%;
   letter-spacing: 0.06em;
@@ -967,7 +969,7 @@ section {
 .pets__slider .pets__cards .pets__card .pets__link {
   margin-bottom: 30px;
   font-family: "Georgia", "Arial", sans-serif;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 400;
   line-height: 130%;
   letter-spacing: 0.06em;
@@ -1016,4 +1018,8 @@ section {
 
 .pets__buttons_left {
   transform: rotate(180deg);
+}
+
+html {
+  scroll-behavior: smooth;
 }/*# sourceMappingURL=style.css.map */

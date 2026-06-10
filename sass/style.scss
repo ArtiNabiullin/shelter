@@ -16,3 +16,9 @@
 //components
 @import "./components/slider";
 @import "./components/buttons";
+
+//
+
+html {
+  scroll-behavior: smooth;
+}
