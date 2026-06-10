@@ -4,11 +4,15 @@
     radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%), #211f20;
 }
 .header {
+  margin: 0;
   .header__container {
     max-width: $max-width-1200;
-    padding-top: 25px;
+    padding-top: 30px;
     margin: $margin-center;
     @include flex($justify: space-between, $gap: 0);
+    @media (max-width: $tablet) {
+      max-width: $max-width-708;
+    }
     .header__logo {
       @include flex($flex: column);
       text-decoration: $text-decoration;
@@ -17,7 +21,7 @@
         transition: opacity 0.3s ease;
       }
       .header__title {
-        @include font("h3");
+        @include font("logo");
         color: $color-primary;
       }
       .header__subtitle {
@@ -37,8 +41,23 @@
 .startscreen {
   .startscreen__content {
     max-width: $max-width-1200;
-    margin: 84px auto 0 auto;
+    margin: 90px auto 0 auto;
     @include flex($justify: space-between, $gap: 42px);
+    @media (max-width: $tablet) {
+      margin: 60px auto 0 auto;
+      @include flex($justify: center, $gap: 100px);
+      .startscreen__image {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        padding-right: 28px;
+      }
+      .startscreen__puppy_image {
+        @media (max-width: $tablet) {
+          max-width: 569px;
+        }
+      }
+    }
   }
   .startscreen__information {
     @include flex(
@@ -47,7 +66,10 @@
       $gap: 40px,
       $flex: column
     );
-    padding-bottom: 110px;
+    padding-bottom: 114px;
+    @media (max-width: $tablet) {
+      padding-bottom: 0;
+    }
     .startscreen__heading {
       @include font("h2");
       color: $color-text-white;
@@ -69,6 +91,9 @@
       &:hover {
         transition: background-color 0.3s ease;
         background-color: $color-primary-light;
+      }
+      @media (max-width: $tablet) {
+        align-self: center;
       }
     }
   }

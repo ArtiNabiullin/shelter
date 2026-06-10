@@ -1,7 +1,15 @@
 .pets__slider {
   @include flex($gap: 53px);
+  @media (max-width: $tablet) {
+    max-width: $max-width-708;
+    @include flex($gap: 12px);
+  }
   .pets__cards {
     @include flex($gap: 90px);
+    overflow: $overflow;
+    @media (max-width: $tablet) {
+      @include flex($gap: 40px);
+    }
     .pets__card {
       background-color: $color-background-snow;
       transition: box-shadow 0.3s ease;
@@ -15,6 +23,11 @@
         box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
         .pets__link {
           background-color: $color-primary-light;
+        }
+      }
+      @media (max-width: $tablet) {
+        &:nth-child(n + 3) {
+          display: none;
         }
       }
       .pets__cards_desc {

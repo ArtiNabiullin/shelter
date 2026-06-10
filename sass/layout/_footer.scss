@@ -11,6 +11,10 @@
 .footer__content {
   padding-top: $padding-footer;
   @include flex($gap: 160px);
+  @media (max-width: $tablet) {
+    @include flex($gap: 65px);
+    padding-top: 35px;
+  }
   .footer__table_contact {
     @include flex($align: start, $flex: column, $gap: 40px);
   }
