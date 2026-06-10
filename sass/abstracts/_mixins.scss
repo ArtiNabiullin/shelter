@@ -15,8 +15,8 @@
 
 @mixin grid($grid-gap: 30px 40px) {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, 270px);
+  justify-content: center;
   gap: $grid-gap;
 }
 

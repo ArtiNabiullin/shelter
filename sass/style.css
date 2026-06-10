@@ -721,7 +721,7 @@ section {
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 65px;
+    gap: 60px;
     padding-top: 35px;
   }
 }
@@ -790,6 +790,11 @@ section {
   flex-wrap: wrap;
   gap: 0;
 }
+@media (max-width: 768px) {
+  .header__pets .pets__container {
+    max-width: 708px;
+  }
+}
 .header__pets .pets__container .pets__logo {
   display: flex;
   justify-content: center;
@@ -805,9 +810,9 @@ section {
 }
 .header__pets .pets__container .pets__logo .pets__title {
   font-family: "Georgia", "Arial", sans-serif;
-  font-size: 35px;
+  font-size: 32px;
   font-weight: 400;
-  line-height: 130%;
+  line-height: 110%;
   letter-spacing: 0.06em;
   color: #545454;
 }
@@ -874,6 +879,11 @@ section {
   background-color: #f6f6f6;
   padding: 60px 0 100px;
 }
+@media (max-width: 768px) {
+  .animals {
+    padding: 60px 0 70px;
+  }
+}
 .animals .animals__content {
   display: flex;
   justify-content: center;
@@ -882,8 +892,25 @@ section {
   flex-wrap: wrap;
   gap: 45px;
 }
+@media (max-width: 768px) {
+  .animals .animals__content {
+    max-width: 708px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+}
 .animals .animals__content .pets__heading {
   text-align: center;
+}
+@media (max-width: 768px) {
+  .animals .animals__content .pets__heading {
+    padding-top: 20px;
+    margin-bottom: 30px;
+  }
 }
 .animals .animals__content .animals__buttons {
   display: flex;
@@ -892,6 +919,11 @@ section {
   flex-direction: row;
   flex-wrap: wrap;
   gap: 20px;
+}
+@media (max-width: 768px) {
+  .animals .animals__content .animals__buttons {
+    margin-top: 40px;
+  }
 }
 .animals .animals__content .animals__buttons .animals__button {
   display: flex;
@@ -915,13 +947,20 @@ section {
   transform: rotate(180deg);
 }
 .animals .animals__content .pets__cards {
+  width: 100%;
   padding: 15px 0;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, 270px);
+  justify-content: center;
   gap: 30px 40px;
 }
+@media (max-width: 768px) {
+  .animals .animals__content .pets__cards {
+    padding: 0;
+  }
+}
 .animals .animals__content .pets__cards .pets__card {
+  width: 270px;
   background-color: #fafafa;
   border-radius: 9px;
   transition: box-shadow 0.3s ease;
@@ -931,6 +970,11 @@ section {
   flex-direction: column;
   flex-wrap: wrap;
   gap: 30px;
+}
+@media (max-width: 768px) {
+  .animals .animals__content .pets__cards .pets__card:nth-child(n+7) {
+    display: none;
+  }
 }
 .animals .animals__content .pets__cards .pets__card .pets__link {
   transition: background-color 0.3s ease;

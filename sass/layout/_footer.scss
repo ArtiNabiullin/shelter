@@ -12,7 +12,7 @@
   padding-top: $padding-footer;
   @include flex($gap: 160px);
   @media (max-width: $tablet) {
-    @include flex($gap: 65px);
+    @include flex($gap: 60px);
     padding-top: 35px;
   }
   .footer__table_contact {

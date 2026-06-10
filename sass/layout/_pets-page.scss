@@ -10,6 +10,9 @@
     padding: 30px 0;
     margin: $margin-center;
     @include flex($justify: space-between, $gap: 0);
+    @media (max-width: $tablet) {
+      max-width: $max-width-708;
+    }
     .pets__logo {
       @include flex($flex: column);
       text-decoration: $text-decoration;
@@ -18,7 +21,7 @@
         transition: opacity 0.3s ease;
       }
       .pets__title {
-        @include font("h3");
+        @include font("logo");
         color: $color-text-black;
       }
       .pets__subtitle {
@@ -87,13 +90,27 @@
 .animals {
   background-color: $color-background-gray;
   padding: $padding-center-pets;
+  @media (max-width: $tablet) {
+    padding: 60px 0 70px;
+  }
   .animals__content {
     @include flex($flex: column, $gap: 45px);
+    @media (max-width: $tablet) {
+      max-width: $max-width-708;
+      @include flex($flex: column, $gap: 0);
+    }
     .pets__heading {
       text-align: $text-align;
+      @media (max-width: $tablet) {
+        padding-top: 20px;
+        margin-bottom: 30px;
+      }
     }
     .animals__buttons {
       @include flex($gap: 20px);
+      @media (max-width: $tablet) {
+        margin-top: 40px;
+      }
       .animals__button {
         @include flex();
         box-sizing: border-box;
@@ -112,13 +129,23 @@
       }
     }
     .pets__cards {
+      width: 100%;
       padding: $padding-animals;
       @include grid();
+      @media (max-width: $tablet) {
+        padding: 0;
+      }
       .pets__card {
+        width: 270px;
         background-color: $color-background-snow;
         border-radius: $border-radius-donation;
         transition: box-shadow 0.3s ease;
         @include flex($flex: column, $gap: 30px);
+        @media (max-width: $tablet) {
+          &:nth-child(n + 7) {
+            display: none;
+          }
+        }
         .pets__link {
           transition: background-color 0.3s ease;
         }
