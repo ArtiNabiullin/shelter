@@ -4,6 +4,7 @@ $font-family-subtitle: "Arial", "Georgia", sans-serif;
 $font-style: italic;
 $font-size-h2: 45px;
 $font-size-h3: 35px;
+$font-size-h3-mobile: 25px;
 $font-size-h4: 20px;
 $font-size-h5: 15px;
 $font-size-but: 17px;
@@ -32,6 +33,14 @@ $typography-styles: (
     "line-height": $line-height-h3,
     "letter-spacing": $letter-spacing,
   ),
+  "h3-mobile": (
+    "font-family": $font-family-title,
+    "font-size": $font-size-h3-mobile,
+    "font-weight": $font-weight,
+    "line-height": $line-height-h3,
+    "letter-spacing": $letter-spacing,
+    "text-align": $text-align,
+  ),
   "h4": (
     "font-family": $font-family-title,
     "font-size": $font-size-h4,
@@ -44,6 +53,14 @@ $typography-styles: (
     "font-size": $font-size-h5,
     "font-weight": $font-weight,
     "line-height": $line-height-h5,
+  ),
+  "h5-mobile": (
+    "font-family": $font-family-title,
+    "font-size": $font-size-h5,
+    "font-weight": $font-weight,
+    "line-height": $line-height-logo,
+    "letter-spacing": $letter-spacing,
+    "text-align": $text-align,
   ),
   "button": (
     "font-family": $font-family-title,

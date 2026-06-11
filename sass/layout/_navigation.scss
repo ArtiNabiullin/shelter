@@ -1,4 +1,7 @@
 .nav {
+  @media (max-width: $mobile) {
+    display: none;
+  }
   .nav__items {
     @include flex($justify: space-between, $gap: 35px);
     .is-active {

@@ -13,6 +13,9 @@
     @media (max-width: $tablet) {
       max-width: $max-width-708;
     }
+    @media (max-width: $mobile) {
+      max-width: $max-width-280;
+    }
     .pets__logo {
       @include flex($flex: column);
       text-decoration: $text-decoration;

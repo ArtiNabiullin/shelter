@@ -13,6 +13,9 @@
     @media (max-width: $tablet) {
       max-width: $max-width-708;
     }
+    @media (max-width: $mobile) {
+      max-width: $max-width-280;
+    }
     .header__logo {
       @include flex($flex: column);
       text-decoration: $text-decoration;
@@ -58,6 +61,21 @@
         }
       }
     }
+    @media (max-width: $mobile) {
+      @include flex($justify: center, $gap: 105px);
+      max-width: $max-width-300;
+      .startscreen__image {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        padding-right: 0;
+      }
+      .startscreen__puppy_image {
+        @media (max-width: $tablet) {
+          max-width: 260px;
+        }
+      }
+    }
   }
   .startscreen__information {
     @include flex(
@@ -70,16 +88,31 @@
     @media (max-width: $tablet) {
       padding-bottom: 0;
     }
+    @media (max-width: $mobile) {
+      @include flex(
+        $justify: space-between,
+        $align: center,
+        $gap: 42px,
+        $flex: column
+      );
+    }
     .startscreen__heading {
       @include font("h2");
       color: $color-text-white;
+      @media (max-width: $mobile) {
+        @include font("h3-mobile");
+      }
     }
     ::first-letter {
       text-transform: $text-transform;
     }
     .startscreen__subheading {
       @include font("h5");
+      max-width: 460px;
       color: $color-text-gray;
+      @media (max-width: $mobile) {
+        text-align: $text-align;
+      }
     }
     .startscreen__button {
       @include font("button");
