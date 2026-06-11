@@ -41,50 +41,6 @@
   }
 }
 
-.nav__pets {
-  .pets__items {
-    @include flex($justify: space-between, $gap: 35px);
-    .is-active {
-      .pets__link {
-        color: $color-text-dark;
-      }
-      &::after {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 3px;
-        transition: background-color 0.3s ease;
-        background-color: $color-primary;
-      }
-    }
-  }
-  .pets__link {
-    font-family: $font-family-subtitle;
-    font-weight: $font-weight;
-    font-size: $font-size-h5;
-    line-height: 160%;
-    color: $color-text-black;
-    text-decoration: $color-text-white;
-    &:hover {
-      transition: color 0.3s ease;
-      color: $color-text-dark;
-    }
-    &:active {
-      &::after {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 3px;
-        transition: background-color 0.3s ease;
-        background-color: $color-primary;
-      }
-    }
-  }
-  ::first-letter {
-    text-transform: $text-transform;
-  }
-}
-
 //pets-section
 .section {
   margin: 0;
@@ -96,11 +52,17 @@
   @media (max-width: $tablet) {
     padding: 60px 0 70px;
   }
+  @media (max-width: $mobile) {
+    padding: 42px 0;
+  }
   .animals__content {
     @include flex($flex: column, $gap: 45px);
     @media (max-width: $tablet) {
       max-width: $max-width-708;
       @include flex($flex: column, $gap: 0);
+    }
+    @media (max-width: $mobile) {
+      @include flex($flex: column, $gap: 42px);
     }
     .pets__heading {
       text-align: $text-align;
@@ -108,11 +70,19 @@
         padding-top: 20px;
         margin-bottom: 30px;
       }
+      @media (max-width: $mobile) {
+        padding-top: 0;
+        margin-bottom: 0;
+      }
     }
     .animals__buttons {
       @include flex($gap: 20px);
       @media (max-width: $tablet) {
         margin-top: 40px;
+      }
+      @media (max-width: $mobile) {
+        @include flex($gap: 10px);
+        margin-top: 0;
       }
       .animals__button {
         @include flex();
@@ -149,6 +119,11 @@
             display: none;
           }
         }
+        @media (max-width: $mobile) {
+          &:nth-child(n + 4) {
+            display: none;
+          }
+        }
         .pets__link {
           transition: background-color 0.3s ease;
         }
@@ -157,6 +132,11 @@
           box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
           .pets__link {
             background-color: $color-primary-light;
+          }
+        }
+        .pets__card_image {
+          @media (max-width: $mobile) {
+            max-width: 270px;
           }
         }
         .pets__cards_desc {
