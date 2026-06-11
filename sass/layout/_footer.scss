@@ -6,21 +6,42 @@
   .footer__wrapper {
     max-width: $max-width-1200;
     margin: $margin-center;
+    @media (max-width: $mobile) {
+      max-width: $max-width-300;
+    }
   }
 }
 .footer__content {
   padding-top: $padding-footer;
   @include flex($gap: 160px);
+  @media (max-width: $tablet) {
+    @include flex($gap: 60px);
+    padding-top: 35px;
+  }
+  @media (max-width: $mobile) {
+    @include flex($gap: 40px);
+    padding-top: 30px;
+  }
   .footer__table_contact {
     @include flex($align: start, $flex: column, $gap: 40px);
+    @media (max-width: $mobile) {
+      @include flex($flex: column, $gap: 40px);
+    }
   }
   .footer__table_location {
     @include flex($align: start, $flex: column, $gap: 31px);
+    @media (max-width: $mobile) {
+      @include flex($align: start, $flex: column, $gap: 40px);
+    }
   }
 }
 .footer__title {
   @include font("h3");
   color: $color-text-white;
+  max-width: 279px;
+  @media (max-width: $mobile) {
+    @include font("h3-mobile");
+  }
 }
 .footer__card {
   @include flex($gap: 20px);
