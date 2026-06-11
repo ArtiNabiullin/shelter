@@ -1,0 +1,41 @@
+// Buttons in main-page
+.pets__buttons {
+  width: 52px;
+  height: 52px;
+  border-radius: 100px;
+  border: 2px solid $color-primary;
+  background-color: $color-background-gray;
+  cursor: pointer;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 17px;
+    width: 14px;
+    height: 2px;
+    background-color: $color-text-black;
+    transform: translateY(-50%);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 27px;
+    width: 5px;
+    height: 5px;
+    border-top: 2px solid $color-text-black;
+    border-right: 2px solid $color-text-black;
+    transform: translateY(-50%) rotate(45deg);
+  }
+
+  &:hover {
+    background-color: $color-primary-light;
+    border-color: $color-primary-light;
+  }
+}
+.pets__buttons_left {
+  transform: rotate(180deg);
+}

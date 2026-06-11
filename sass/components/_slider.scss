@@ -1,0 +1,72 @@
+.pets__slider {
+  @include flex($gap: 53px);
+  @media (max-width: $tablet) {
+    max-width: $max-width-708;
+    @include flex($gap: 12px);
+  }
+  @media (max-width: $mobile) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    row-gap: 20px;
+  }
+  .pets__cards {
+    @include flex($gap: 90px);
+    overflow: $overflow;
+    @media (max-width: $tablet) {
+      @include flex($gap: 40px);
+    }
+    @media (max-width: $mobile) {
+      grid-column: 1 / -1;
+      grid-row: 1;
+    }
+    .pets__card {
+      background-color: $color-background-snow;
+      transition: box-shadow 0.3s ease;
+      @include flex($flex: column, $gap: 30px);
+      border-radius: $border-radius-donation;
+      .pets__link {
+        transition: background-color 0.3s ease;
+      }
+      &:hover {
+        cursor: pointer;
+        box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
+        .pets__link {
+          background-color: $color-primary-light;
+        }
+      }
+      @media (max-width: $tablet) {
+        &:nth-child(n + 3) {
+          display: none;
+        }
+      }
+      @media (max-width: $mobile) {
+        &:nth-child(n + 2) {
+          display: none;
+        }
+      }
+      .pets__buttons {
+        @media (max-width: $mobile) {
+          grid-row: 2;
+        }
+      }
+      .pets__cards_desc {
+        color: $color-text-black;
+        @include font("h4");
+      }
+      .pets__link {
+        margin-bottom: 30px;
+        @include font("button");
+        color: $color-text-dark;
+        text-decoration: $text-decoration;
+        padding: $padding-button;
+        background-color: $color-background-snow;
+        border-radius: $border-radius-button;
+        border: 2px solid $color-primary-light;
+      }
+      .pets__card_image {
+        max-width: 270px;
+      }
+    }
+  }
+}

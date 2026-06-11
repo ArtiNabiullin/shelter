@@ -1,0 +1,30 @@
+@mixin flex(
+  $justify: center,
+  $align: center,
+  $flex: row,
+  $gap: 10px,
+  $wrap: wrap
+) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $flex;
+  flex-wrap: $wrap;
+  gap: $gap;
+}
+
+@mixin grid($grid-gap: 30px 40px) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 270px);
+  justify-content: center;
+  gap: $grid-gap;
+}
+
+@mixin font($style-name) {
+  $style: map-get($typography-styles, $style-name);
+  @if $style {
+    @each $property, $value in $style {
+      #{$property}: $value;
+    }
+  }
+}
