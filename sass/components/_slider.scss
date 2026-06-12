@@ -4,6 +4,12 @@
     max-width: $max-width-708;
     @include flex($gap: 12px);
   }
+  @media (max-width: 400px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    row-gap: 20px;
+  }
   @media (max-width: $mobile) {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -15,6 +21,10 @@
     overflow: $overflow;
     @media (max-width: $tablet) {
       @include flex($gap: 40px);
+    }
+    @media (max-width: 400px) {
+      grid-column: 1 / -1;
+      grid-row: 1;
     }
     @media (max-width: $mobile) {
       grid-column: 1 / -1;
@@ -35,8 +45,18 @@
           background-color: $color-primary-light;
         }
       }
+      @media (max-width: 1240px) {
+        &:nth-child(n + 3) {
+          display: none;
+        }
+      }
       @media (max-width: $tablet) {
         &:nth-child(n + 3) {
+          display: none;
+        }
+      }
+      @media (max-width: 760px) {
+        &:nth-child(n + 2) {
           display: none;
         }
       }
@@ -46,6 +66,9 @@
         }
       }
       .pets__buttons {
+        @media (max-width: 400px) {
+          grid-row: 2;
+        }
         @media (max-width: $mobile) {
           grid-row: 2;
         }
