@@ -10,7 +10,11 @@
     padding-top: 30px;
     margin: $margin-center;
     @include flex($justify: space-between, $gap: 0);
+    @media (max-width: 1240px) {
+      padding: 30px 30px 0;
+    }
     @media (max-width: $tablet) {
+      padding: 30px 0 0;
       max-width: $max-width-708;
     }
     @media (max-width: $mobile) {
@@ -55,11 +59,12 @@
         width: 100%;
         padding-right: 28px;
       }
-      .startscreen__puppy_image {
-        @media (max-width: $tablet) {
-          max-width: 569px;
-        }
-      }
+    }
+    @media (max-width: 1240px) {
+      @include flex($justify: center, $gap: 100px);
+    }
+    @media (max-width: 500px) {
+      max-width: 300px;
     }
     @media (max-width: $mobile) {
       @include flex($justify: center, $gap: 105px);
@@ -70,10 +75,16 @@
         width: 100%;
         padding-right: 0;
       }
-      .startscreen__puppy_image {
-        @media (max-width: $tablet) {
-          max-width: 260px;
-        }
+    }
+    .startscreen__puppy_image {
+      @media (max-width: $tablet) {
+        max-width: 569px;
+      }
+      @media (max-width: 660px) {
+        max-width: 260px;
+      }
+      @media (max-width: $mobile) {
+        max-width: 260px;
       }
     }
   }
@@ -86,6 +97,9 @@
     );
     padding-bottom: 114px;
     @media (max-width: $tablet) {
+      padding-bottom: 0;
+    }
+    @media (max-width: 1240px) {
       padding-bottom: 0;
     }
     @media (max-width: $mobile) {
