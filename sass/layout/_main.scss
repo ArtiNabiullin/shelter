@@ -1,3 +1,9 @@
+body {
+  &.lock {
+    overflow: hidden;
+  }
+}
+
 section {
   margin: 0;
 }
