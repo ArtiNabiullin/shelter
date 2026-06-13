@@ -17,7 +17,11 @@
       padding: 30px 0 0;
       max-width: $max-width-708;
     }
+    @media (max-width: 750px) {
+      padding: 30px 30px 0;
+    }
     @media (max-width: $mobile) {
+      padding: 30px 0 0;
       max-width: $max-width-280;
     }
     .header__logo {
@@ -142,6 +146,75 @@
       @media (max-width: $tablet) {
         align-self: center;
       }
+    }
+  }
+}
+
+//burger
+.hamburger {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .hamburger {
+    display: inline-block;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    z-index: 30;
+    &::after,
+    &::before,
+    .hamburger__line {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 2px;
+      background-color: $color-primary;
+      transform: translate(-50%, -50%);
+      transition:
+        top 0.3s ease,
+        left 0.3s ease,
+        transform 0.3s ease;
+    }
+
+    &::after {
+      top: 26px;
+    }
+
+    &::before {
+      top: 16px;
+    }
+
+    .hamburger__line {
+      top: 6px;
+    }
+
+    &.active::after {
+      top: 16px;
+      left: 25px;
+      transform: translate(-50%, -50%) rotate(-90deg);
+    }
+
+    &.active::before {
+      top: 16px;
+      left: 15px;
+      transform: translate(-50%, -50%) rotate(-90deg);
+    }
+
+    &.active .hamburger__line {
+      top: 16px;
+      left: 5px;
+      transform: translate(-50%, -50%) rotate(-90deg);
+    }
+  }
+  .hamburger__pets {
+    &::after,
+    &::before,
+    .hamburger__line {
+      background-color: $color-text-dark;
     }
   }
 }
