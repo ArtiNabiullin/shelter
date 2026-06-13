@@ -13,13 +13,13 @@
       <header class="header__pets">
         <div class="pets__container">
           <a href="index.html" class="pets__logo">
-            <span class="pets__title">cozy House</span>
+            <h1 class="pets__title">cozy House</h1>
             <span class="pets__subtitle">shelter for pets in Boston</span>
           </a>
-          <div class="nav__pets">
+          <nav class="nav__pets">
             <ul class="pets__items">
               <li class="pets__item">
-                <a href="/index.html#about" class="pets__link"
+                <a href="./index.html#about" class="pets__link"
                   >about the shelter</a
                 >
               </li>
@@ -27,15 +27,23 @@
                 <a href="pets.html" class="pets__link">our pets</a>
               </li>
               <li class="pets__item">
-                <a href="/index.html#help" class="pets__link"
+                <a href="./index.html#help" class="pets__link"
                   >help the shelter</a
                 >
               </li>
               <li class="pets__item">
-                <a href="/index.html#footer" class="pets__link">contacts</a>
+                <a href="#footer" class="pets__link">contacts</a>
               </li>
             </ul>
-          </div>
+          </nav>
+          <button
+            class="hamburger hamburger__pets"
+            type="button"
+            aria-label="Open menu"
+            aria-expanded="false"
+          >
+            <span class="hamburger__line"></span>
+          </button>
         </div>
       </header>
     </div>
@@ -44,9 +52,9 @@
     <main class="main">
       <section class="animals">
         <div class="animals__content main__content">
-          <h3 class="pets__heading main__title">
+          <h2 class="pets__heading main__title">
             our friends who<br />are looking for a house
-          </h3>
+          </h2>
           <div class="pets__cards">
             <div class="pets__card">
               <img
@@ -123,17 +131,17 @@
           </div>
           <div class="animals__buttons">
             <div class="animals__button animals__button_left">
-              <img src="/img/buttons/btn-all-rigth.svg" alt="btn-all-left" />
+              <img src="./img/buttons/btn-all-rigth.svg" alt="btn-all-left" />
             </div>
             <div class="animals__button animals__button_left">
-              <img src="/img/buttons/btn-right.svg" alt="btn-left" />
+              <img src="./img/buttons/btn-right.svg" alt="btn-left" />
             </div>
             <div class="animals__button">1</div>
             <div class="animals__button">
-              <img src="/img/buttons/btn-right.svg" alt="btn-right" />
+              <img src="./img/buttons/btn-right.svg" alt="btn-right" />
             </div>
             <div class="animals__button">
-              <img src="/img/buttons/btn-all-rigth.svg" alt="btn-all-right" />
+              <img src="./img/buttons/btn-all-rigth.svg" alt="btn-all-right" />
             </div>
           </div>
         </div>
@@ -210,5 +218,6 @@
         </div>
       </div>
     </footer>
+    <script src="./main.js"></script>
   </body>
 </html>

@@ -1,6 +1,6 @@
 .start-screen-wrapper {
   background:
-    url(/img/noise_transparent@2x.png),
+    url(../img/noise_transparent@2x.png),
     radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%), #211f20;
 }
 .header {
@@ -10,10 +10,18 @@
     padding-top: 30px;
     margin: $margin-center;
     @include flex($justify: space-between, $gap: 0);
+    @media (max-width: 1240px) {
+      padding: 30px 30px 0;
+    }
     @media (max-width: $tablet) {
+      padding: 30px 0 0;
       max-width: $max-width-708;
     }
+    @media (max-width: 750px) {
+      padding: 30px 30px 0;
+    }
     @media (max-width: $mobile) {
+      padding: 30px 0 0;
       max-width: $max-width-280;
     }
     .header__logo {
@@ -55,11 +63,12 @@
         width: 100%;
         padding-right: 28px;
       }
-      .startscreen__puppy_image {
-        @media (max-width: $tablet) {
-          max-width: 569px;
-        }
-      }
+    }
+    @media (max-width: 1240px) {
+      @include flex($justify: center, $gap: 100px);
+    }
+    @media (max-width: 500px) {
+      max-width: 300px;
     }
     @media (max-width: $mobile) {
       @include flex($justify: center, $gap: 105px);
@@ -70,10 +79,16 @@
         width: 100%;
         padding-right: 0;
       }
-      .startscreen__puppy_image {
-        @media (max-width: $tablet) {
-          max-width: 260px;
-        }
+    }
+    .startscreen__puppy_image {
+      @media (max-width: $tablet) {
+        max-width: 569px;
+      }
+      @media (max-width: 660px) {
+        max-width: 260px;
+      }
+      @media (max-width: $mobile) {
+        max-width: 260px;
       }
     }
   }
@@ -86,6 +101,9 @@
     );
     padding-bottom: 114px;
     @media (max-width: $tablet) {
+      padding-bottom: 0;
+    }
+    @media (max-width: 1240px) {
       padding-bottom: 0;
     }
     @media (max-width: $mobile) {
@@ -128,6 +146,75 @@
       @media (max-width: $tablet) {
         align-self: center;
       }
+    }
+  }
+}
+
+//burger
+.hamburger {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .hamburger {
+    display: inline-block;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    z-index: 30;
+    &::after,
+    &::before,
+    .hamburger__line {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 2px;
+      background-color: $color-primary;
+      transform: translate(-50%, -50%);
+      transition:
+        top 0.3s ease,
+        left 0.3s ease,
+        transform 0.3s ease;
+    }
+
+    &::after {
+      top: 26px;
+    }
+
+    &::before {
+      top: 16px;
+    }
+
+    .hamburger__line {
+      top: 6px;
+    }
+
+    &.active::after {
+      top: 16px;
+      left: 25px;
+      transform: translate(-50%, -50%) rotate(-90deg);
+    }
+
+    &.active::before {
+      top: 16px;
+      left: 15px;
+      transform: translate(-50%, -50%) rotate(-90deg);
+    }
+
+    &.active .hamburger__line {
+      top: 16px;
+      left: 5px;
+      transform: translate(-50%, -50%) rotate(-90deg);
+    }
+  }
+  .hamburger__pets {
+    &::after,
+    &::before,
+    .hamburger__line {
+      background-color: $color-text-dark;
     }
   }
 }

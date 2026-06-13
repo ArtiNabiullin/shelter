@@ -10,10 +10,18 @@
     padding: 30px 0;
     margin: $margin-center;
     @include flex($justify: space-between, $gap: 0);
+    @media (max-width: 1240px) {
+      padding: 30px 30px;
+    }
     @media (max-width: $tablet) {
+      padding: 30px 0;
       max-width: $max-width-708;
     }
+    @media (max-width: 750px) {
+      padding: 30px 30px;
+    }
     @media (max-width: $mobile) {
+      padding: 30px 0;
       max-width: $max-width-280;
     }
     .pets__logo {
