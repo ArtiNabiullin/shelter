@@ -719,6 +719,10 @@ textarea {
   .hamburger__pets .hamburger__line {
     background-color: #292929;
   }
+  .hamburger__pets.active::after, .hamburger__pets.active::before,
+  .hamburger__pets.active .hamburger__line {
+    background-color: #f1cdb3;
+  }
 }
 body.lock {
   overflow: hidden;
@@ -1473,6 +1477,7 @@ section {
 }
 .animals .animals__content .pets__cards .pets__card:hover {
   cursor: pointer;
+  background-color: #ffffff;
   box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
 }
 .animals .animals__content .pets__cards .pets__card:hover .pets__link {
@@ -1721,7 +1726,13 @@ section {
   flex-direction: row;
   flex-wrap: wrap;
   gap: 90px;
-  overflow: hidden;
+  transition: transform 0.5s ease;
+}
+.pets__slider .pets__cards.animate-left {
+  transform: translateX(-100%);
+}
+.pets__slider .pets__cards.animate-right {
+  transform: translateX(100%);
 }
 @media (max-width: 768px) {
   .pets__slider .pets__cards {
@@ -1761,30 +1772,11 @@ section {
 }
 .pets__slider .pets__cards .pets__card:hover {
   cursor: pointer;
+  background-color: #ffffff;
   box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
 }
 .pets__slider .pets__cards .pets__card:hover .pets__link {
   background-color: #fddcc4;
-}
-@media (max-width: 1240px) {
-  .pets__slider .pets__cards .pets__card:nth-child(n+3) {
-    display: none;
-  }
-}
-@media (max-width: 768px) {
-  .pets__slider .pets__cards .pets__card:nth-child(n+3) {
-    display: none;
-  }
-}
-@media (max-width: 760px) {
-  .pets__slider .pets__cards .pets__card:nth-child(n+2) {
-    display: none;
-  }
-}
-@media (max-width: 320px) {
-  .pets__slider .pets__cards .pets__card:nth-child(n+2) {
-    display: none;
-  }
 }
 @media (max-width: 400px) {
   .pets__slider .pets__cards .pets__card .pets__buttons {
@@ -1820,6 +1812,10 @@ section {
 }
 .pets__slider .pets__cards .pets__card .pets__card_image {
   max-width: 270px;
+}
+
+.pets__viewport {
+  overflow: hidden;
 }
 
 .pets__buttons {

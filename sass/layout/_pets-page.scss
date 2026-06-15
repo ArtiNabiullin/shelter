@@ -137,6 +137,7 @@
         }
         &:hover {
           cursor: pointer;
+          background-color: $color-background-white;
           box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
           .pets__link {
             background-color: $color-primary-light;
