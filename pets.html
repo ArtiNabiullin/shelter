@@ -55,92 +55,25 @@
           <h2 class="pets__heading main__title">
             our friends who<br />are looking for a house
           </h2>
-          <div class="pets__cards">
-            <div class="pets__card">
-              <img
-                src="./img/pets-katrine.png"
-                alt="pets-katrine"
-                class="pets__card_image"
-              />
-              <p class="pets__cards_desc">katrine</p>
-              <a href="#" class="pets__link">learn more</a>
+          <dialog id="modal">
+            <div id="close__modal" class="close__modal">
+              <span class="close__modal-line"></span>
             </div>
-            <div class="pets__card">
-              <img
-                src=".//img/pets-jennifer.png"
-                alt="pets-jennifer"
-                class="pets__card_image"
-              />
-              <p class="pets__cards_desc">jennifer</p>
-              <a href="#" class="pets__link">learn more</a>
-            </div>
-            <div class="pets__card">
-              <img
-                src="./img/pets-woody.png"
-                alt="pets-woody"
-                class="pets__card_image"
-              />
-              <p class="pets__cards_desc">woody</p>
-              <a href="#" class="pets__link">learn more</a>
-            </div>
-            <div class="pets__card">
-              <img
-                src="./img/pets-sophia.png"
-                alt="pets-sophia"
-                class="pets__card_image"
-              />
-              <p class="pets__cards_desc">sophia</p>
-              <a href="#" class="pets__link">learn more</a>
-            </div>
-            <div class="pets__card">
-              <img
-                src="./img/pets-timmy.png"
-                alt="pets-timmy"
-                class="pets__card_image"
-              />
-              <p class="pets__cards_desc">timmy</p>
-              <a href="#" class="pets__link">learn more</a>
-            </div>
-            <div class="pets__card">
-              <img
-                src="./img/pets-charly.png"
-                alt="pets-charly"
-                class="pets__card_image"
-              />
-              <p class="pets__cards_desc">charly</p>
-              <a href="#" class="pets__link">learn more</a>
-            </div>
-            <div class="pets__card">
-              <img
-                src="./img/pets-scarlet.png"
-                alt="pets-scarlet"
-                class="pets__card_image"
-              />
-              <p class="pets__cards_desc">scarlett</p>
-              <a href="#" class="pets__link">learn more</a>
-            </div>
-            <div class="pets__card">
-              <img
-                src="./img/pets-freddie.png"
-                alt="pets-freddie"
-                class="pets__card_image"
-              />
-              <p class="pets__cards_desc">freddie</p>
-              <a href="#" class="pets__link">learn more</a>
-            </div>
-          </div>
+            <div id="modal__content" class="modal__content"></div>
+          </dialog>
+          <div class="pets__cards pets__cards_catalog"></div>
           <div class="animals__buttons">
-            <div class="animals__button animals__button_left">
+            <div class="animals__button animals__button_left-all">
               <img src="./img/buttons/btn-all-rigth.svg" alt="btn-all-left" />
             </div>
             <div class="animals__button animals__button_left">
               <img src="./img/buttons/btn-right.svg" alt="btn-left" />
             </div>
-            <div class="animals__button">1</div>
-            <div class="animals__button">
+            <div class="animals__button page__indicator"></div>
+            <div class="animals__button animals__button_right">
               <img src="./img/buttons/btn-right.svg" alt="btn-right" />
             </div>
-            <div class="animals__button">
+            <div class="animals__button animals__button_right-all">
               <img src="./img/buttons/btn-all-rigth.svg" alt="btn-all-right" />
             </div>
           </div>
@@ -218,6 +151,6 @@
         </div>
       </div>
     </footer>
-    <script type="module" src="./main.js"></script>
+    <script type="module" src="./js/pets.js"></script>
   </body>
 </html>
