@@ -127,4 +127,10 @@ export function initBurger() {
       closeMenu();
     }
   });
+
+  nav.addEventListener("click", (event) => {
+    if (event.target === nav) {
+      closeMenu();
+    }
+  });
 }
