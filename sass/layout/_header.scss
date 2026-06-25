@@ -217,4 +217,11 @@
       background-color: $color-text-dark;
     }
   }
+  .hamburger__pets.active {
+    &::after,
+    &::before,
+    .hamburger__line {
+      background-color: $color-primary;
+    }
+  }
 }

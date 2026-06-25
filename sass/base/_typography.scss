@@ -76,20 +76,27 @@ $typography-styles: (
     "line-height": $line-height-logo,
     "letter-spacing": $letter-spacing,
   ),
+  "h5-modal": (
+    "font-family": $font-family-title,
+    "font-size": $font-size-h5,
+    "font-weight": $font-weight,
+    "line-height": $line-height-logo,
+    "letter-spacing": $letter-spacing,
+  ),
 );
 
 //@font-face
 
 @font-face {
   font-family: "Georgia";
-  src: url("../fonts/georgia-regular.woff2") format("woff");
-  font-weight: 400;
-  font-style: normal;
+  src:
+    url("../../fonts/georgia-regular.woff2") format("woff"),
+    url("../../fonts/georgia-bold.woff2") format("woff");
 }
 
 @font-face {
   font-family: "Arial";
-  src: url("../fonts/arial-regular.woff2") format("woff");
+  src: url("../../fonts/arial-regular.woff2") format("woff");
   font-weight: 400;
   font-style: normal;
 }
