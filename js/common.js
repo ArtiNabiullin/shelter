@@ -1,7 +1,7 @@
 export let pets = [];
 
 export async function loadPets() {
-  const response = await fetch("../json/pets.json");
+  const response = await fetch("./json/pets.json");
 
   if (!response.ok) {
     throw new Error("Не удалось загрузить pets.json");
