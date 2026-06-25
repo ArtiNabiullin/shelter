@@ -144,15 +144,15 @@ table {
   border-spacing: 0;
 }
 
-input[type=search]::-webkit-search-cancel-button,
-input[type=search]::-webkit-search-decoration,
-input[type=search]::-webkit-search-results-button,
-input[type=search]::-webkit-search-results-decoration {
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
 }
 
-input[type=search] {
+input[type="search"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   box-sizing: content-box;
@@ -310,9 +310,9 @@ select {
  *    Known issue: inner spacing remains in IE 6.
  */
 button,
-html input[type=button],
-input[type=reset],
-input[type=submit] {
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
   -webkit-appearance: button; /* 2 */
   cursor: pointer; /* 3 */
   *overflow: visible; /* 4 */
@@ -332,8 +332,8 @@ html input[disabled] {
  * 3. Remove excess padding in IE 7.
  *    Known issue: excess padding remains in IE 6.
  */
-input[type=checkbox],
-input[type=radio] {
+input[type="checkbox"],
+input[type="radio"] {
   box-sizing: border-box; /* 1 */
   padding: 0; /* 2 */
   *height: 13px; /* 3 */
@@ -345,7 +345,7 @@ input[type=radio] {
  * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
  *    (include `-moz` to future-proof).
  */
-input[type=search] {
+input[type="search"] {
   -webkit-appearance: textfield; /* 1 */ /* 2 */
   box-sizing: content-box;
 }
@@ -354,8 +354,8 @@ input[type=search] {
  * Remove inner padding and search cancel button in Safari 5 and Chrome
  * on OS X.
  */
-input[type=search]::-webkit-search-cancel-button,
-input[type=search]::-webkit-search-decoration {
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -426,16 +426,20 @@ textarea {
 
 @font-face {
   font-family: "Georgia";
-  src: url("../../fonts/georgia-regular.woff2") format("woff"), url("../../fonts/georgia-bold.woff2") format("woff");
+  src:
+    url("../fonts/georgia-regular.woff2") format("woff"),
+    url("../fonts/georgia-bold.woff2") format("woff");
 }
 @font-face {
   font-family: "Arial";
-  src: url("../../fonts/arial-regular.woff2") format("woff");
+  src: url("../fonts/arial-regular.woff2") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 .start-screen-wrapper {
-  background: url(../img/noise_transparent@2x.png), radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%), #211f20;
+  background:
+    url(../img/noise_transparent@2x.png),
+    radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%), #211f20;
 }
 
 .header {
@@ -679,7 +683,8 @@ textarea {
     cursor: pointer;
     z-index: 30;
   }
-  .hamburger::after, .hamburger::before,
+  .hamburger::after,
+  .hamburger::before,
   .hamburger .hamburger__line {
     content: "";
     position: absolute;
@@ -687,7 +692,10 @@ textarea {
     height: 2px;
     background-color: #f1cdb3;
     transform: translate(-50%, -50%);
-    transition: top 0.3s ease, left 0.3s ease, transform 0.3s ease;
+    transition:
+      top 0.3s ease,
+      left 0.3s ease,
+      transform 0.3s ease;
   }
   .hamburger::after {
     top: 26px;
@@ -713,11 +721,13 @@ textarea {
     left: 5px;
     transform: translate(-50%, -50%) rotate(-90deg);
   }
-  .hamburger__pets::after, .hamburger__pets::before,
+  .hamburger__pets::after,
+  .hamburger__pets::before,
   .hamburger__pets .hamburger__line {
     background-color: #292929;
   }
-  .hamburger__pets.active::after, .hamburger__pets.active::before,
+  .hamburger__pets.active::after,
+  .hamburger__pets.active::before,
   .hamburger__pets.active .hamburger__line {
     background-color: #f1cdb3;
   }
@@ -796,7 +806,9 @@ section {
   border-radius: 50%;
   transform: scale(1.05);
   box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 @media (max-width: 768px) {
   .about .about__content {
@@ -1135,7 +1147,10 @@ section {
 }
 
 .footer {
-  background: url(../img/noise_transparent@2x.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%), #211f20;
+  background:
+    url(../img/noise_transparent@2x.png),
+    radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%),
+    #211f20;
 }
 .footer .footer__wrapper {
   max-width: 1200px;
@@ -1464,12 +1479,12 @@ section {
   gap: 30px;
 }
 @media (max-width: 768px) {
-  .animals .animals__content .pets__cards_catalog .pets__card:nth-child(n+7) {
+  .animals .animals__content .pets__cards_catalog .pets__card:nth-child(n + 7) {
     display: none;
   }
 }
 @media (max-width: 320px) {
-  .animals .animals__content .pets__cards_catalog .pets__card:nth-child(n+4) {
+  .animals .animals__content .pets__cards_catalog .pets__card:nth-child(n + 4) {
     display: none;
   }
 }
@@ -1485,7 +1500,11 @@ section {
   background-color: #fddcc4;
 }
 @media (max-width: 320px) {
-  .animals .animals__content .pets__cards_catalog .pets__card .pets__card_image {
+  .animals
+    .animals__content
+    .pets__cards_catalog
+    .pets__card
+    .pets__card_image {
     max-width: 270px;
   }
 }
@@ -1584,7 +1603,7 @@ section {
   line-height: 160%;
   color: #cdcdcd;
   -webkit-text-decoration: #ffffff;
-          text-decoration: #ffffff;
+  text-decoration: #ffffff;
 }
 .nav .nav__link:hover {
   transition: color 0.3s ease;
@@ -1670,7 +1689,7 @@ section {
   line-height: 160%;
   color: #545454;
   -webkit-text-decoration: #ffffff;
-          text-decoration: #ffffff;
+  text-decoration: #ffffff;
 }
 .nav__pets .pets__link:hover {
   transition: color 0.3s ease;
@@ -1688,7 +1707,7 @@ section {
   .nav__pets .pets__link {
     color: #cdcdcd;
     -webkit-text-decoration: #ffffff;
-            text-decoration: #ffffff;
+    text-decoration: #ffffff;
     font-size: 32px;
   }
   .nav__pets .pets__link:hover {
@@ -1820,7 +1839,11 @@ section {
   background-color: #ffffff;
   box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
 }
-.pets__slider .pets__viewport .pets__cards_slider .pets__card:hover .pets__link {
+.pets__slider
+  .pets__viewport
+  .pets__cards_slider
+  .pets__card:hover
+  .pets__link {
   background-color: #fddcc4;
 }
 @media (max-width: 400px) {
@@ -1835,7 +1858,11 @@ section {
     grid-row: 2;
   }
 }
-.pets__slider .pets__viewport .pets__cards_slider .pets__card .pets__cards_desc {
+.pets__slider
+  .pets__viewport
+  .pets__cards_slider
+  .pets__card
+  .pets__cards_desc {
   color: #545454;
   font-family: "Georgia", "Arial", sans-serif;
   font-size: 20px;
@@ -1857,7 +1884,11 @@ section {
   border-radius: 100px;
   border: 2px solid #fddcc4;
 }
-.pets__slider .pets__viewport .pets__cards_slider .pets__card .pets__card_image {
+.pets__slider
+  .pets__viewport
+  .pets__cards_slider
+  .pets__card
+  .pets__card_image {
   max-width: 270px;
 }
 
@@ -1915,7 +1946,11 @@ dialog {
   padding: 0;
   opacity: 0;
   transform: translateY(-20px) scale(0.95);
-  transition: opacity 0.3s ease, transform 0.3s ease, display 0.3s ease allow-discrete, overlay 0.3s ease allow-discrete;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    display 0.3s ease allow-discrete,
+    overlay 0.3s ease allow-discrete;
 }
 dialog[open] {
   opacity: 1;
@@ -2056,14 +2091,22 @@ dialog .pets__card-modal .pets__card-modal_block .pets__card-modal_title {
     gap: 10px;
   }
 }
-dialog .pets__card-modal .pets__card-modal_block .pets__card-modal_title .pets__card-modal_desc {
+dialog
+  .pets__card-modal
+  .pets__card-modal_block
+  .pets__card-modal_title
+  .pets__card-modal_desc {
   font-family: "Georgia", "Arial", sans-serif;
   font-size: 35px;
   font-weight: 400;
   line-height: 130%;
   letter-spacing: 0.06em;
 }
-dialog .pets__card-modal .pets__card-modal_block .pets__card-modal_title .type-breed {
+dialog
+  .pets__card-modal
+  .pets__card-modal_block
+  .pets__card-modal_title
+  .type-breed {
   font-family: "Georgia", "Arial", sans-serif;
   font-size: 20px;
   font-weight: 400;
@@ -2091,7 +2134,11 @@ dialog .pets__card-modal .pets__card-modal_block .pets__card-modal_info {
   letter-spacing: 0.06em;
   list-style-type: disc;
 }
-dialog .pets__card-modal .pets__card-modal_block .pets__card-modal_info li::marker {
+dialog
+  .pets__card-modal
+  .pets__card-modal_block
+  .pets__card-modal_info
+  li::marker {
   color: #f1cdb3;
 }
 @media (max-width: 768px) {
@@ -2108,4 +2155,4 @@ dialog .pets__card-modal .pets__card-modal_block .pets__card-modal_info li::mark
 
 html {
   scroll-behavior: smooth;
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */
