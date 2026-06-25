@@ -107,40 +107,20 @@
           <h3 class="pets__heading main__title">
             our friends who<br />are looking for a house
           </h3>
+          <dialog id="modal">
+            <div id="close__modal" class="close__modal">
+              <span class="close__modal-line"></span>
+            </div>
+            <div id="modal__content" class="modal__content"></div>
+          </dialog>
           <div class="pets__slider">
             <button
               class="pets__buttons pets__buttons_left"
               id="prevBtn"
               aria-label="previous slide"
             ></button>
-            <div class="pets__cards">
-              <div class="pets__card">
-                <img
-                  src="./img/pets-katrine.png"
-                  alt="pets-katrine"
-                  class="pets__card_image"
-                />
-                <p class="pets__cards_desc">katrine</p>
-                <a href="#" class="pets__link">learn more</a>
-              </div>
-              <div class="pets__card">
-                <img
-                  src=".//img/pets-jennifer.png"
-                  alt="pets-jennifer"
-                  class="pets__card_image"
-                />
-                <p class="pets__cards_desc">jennifer</p>
-                <a href="#" class="pets__link">learn more</a>
-              </div>
-              <div class="pets__card">
-                <img
-                  src="./img/pets-woody.png"
-                  alt="pets-woody"
-                  class="pets__card_image"
-                />
-                <p class="pets__cards_desc">woody</p>
-                <a href="#" class="pets__link">learn more</a>
-              </div>
+            <div class="pets__viewport">
+              <div class="pets__cards pets__cards_slider"></div>
             </div>
             <button
               class="pets__buttons pets__buttons_right"
@@ -342,6 +322,6 @@
         </div>
       </div>
     </footer>
-    <script src="./main.js"></script>
+    <script type="module" src="./js/main.js"></script>
   </body>
 </html>

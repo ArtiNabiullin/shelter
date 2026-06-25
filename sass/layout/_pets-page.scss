@@ -108,8 +108,11 @@
       .animals__button_left {
         transform: rotate(180deg);
       }
+      .animals__button_left-all {
+        transform: rotate(180deg);
+      }
     }
-    .pets__cards {
+    .pets__cards_catalog {
       width: 100%;
       padding: $padding-animals;
       @include grid();
@@ -137,6 +140,7 @@
         }
         &:hover {
           cursor: pointer;
+          background-color: $color-background-white;
           box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
           .pets__link {
             background-color: $color-primary-light;
@@ -163,5 +167,23 @@
         }
       }
     }
+  }
+}
+
+.animals__button {
+  &.disabled {
+    cursor: default;
+    border-color: $color-text-dark;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  &.disabled:hover {
+    background-color: transparent;
+    border-color: $color-text-dark;
+  }
+
+  &.disabled img {
+    opacity: 0.4;
   }
 }

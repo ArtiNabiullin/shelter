@@ -1,0 +1,134 @@
+body:has(dialog[open]) {
+  overflow: $overflow;
+  scrollbar-gutter: stable;
+}
+
+dialog {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
+  background-color: $color-background-white;
+  max-width: 952px;
+  width: 100%;
+  padding: 0;
+  opacity: 0;
+  transform: translateY(-20px) scale(0.95);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    display 0.3s ease allow-discrete,
+    overlay 0.3s ease allow-discrete;
+  &[open] {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  &::backdrop {
+    background: rgba(41, 41, 41, 0.6);
+  }
+  @media (max-width: $tablet) {
+    max-width: 682px;
+    width: 100%;
+  }
+  @media (max-width: $mobile) {
+    max-width: 270px;
+    width: 100%;
+  }
+  .close__modal {
+    @include flex($gap: 0);
+    position: relative;
+    margin-left: auto;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: 2px solid $color-primary;
+    cursor: pointer;
+    &:hover {
+      background-color: $color-primary;
+    }
+    .close__modal-line {
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 12px;
+        height: 2px;
+        border-radius: 2px;
+        transition: background-color 0.3s ease;
+        background-color: black;
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 12px;
+        height: 2px;
+        border-radius: 2px;
+        transition: background-color 0.3s ease;
+        background-color: black;
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+    }
+  }
+  .pets__card-modal {
+    @include flex($justify: start, $wrap: nowrap, $gap: 0);
+    .pets__card-modal_image {
+      max-width: 500px;
+      width: 100%;
+      @media (max-width: $tablet) {
+        max-width: 350px;
+        width: 100%;
+      }
+      @media (max-width: $mobile) {
+        display: none;
+      }
+    }
+    .pets__card-modal_block {
+      @include flex($align: start, $flex: column, $gap: 40px);
+      margin: 0 auto;
+      max-width: 351px;
+      width: 100%;
+      @media (max-width: $tablet) {
+        @include flex($align: start, $flex: column, $gap: 20px);
+        max-width: 260px;
+        width: 100%;
+      }
+      @media (max-width: $mobile) {
+        @include flex($flex: column, $gap: 20px);
+        max-width: 220px;
+        width: 100%;
+      }
+      .pets__card-modal_title {
+        @include flex($align: start, $flex: column, $gap: 10px);
+        @media (max-width: $mobile) {
+          @include flex($flex: column, $gap: 10px);
+        }
+        .pets__card-modal_desc {
+          @include font("h3");
+        }
+        .type-breed {
+          @include font("h4");
+        }
+      }
+      .pets__card-modal_description {
+        @include font("h5-modal");
+      }
+      .pets__card-modal_info {
+        @include flex($align: start, $flex: column, $gap: 10px);
+        @include font("h5-modal");
+        list-style-type: disc;
+        li::marker {
+          color: $color-primary;
+        }
+        @media (max-width: $tablet) {
+          @include flex($align: start, $flex: column, $gap: 5px);
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
