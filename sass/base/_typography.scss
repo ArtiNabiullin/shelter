@@ -90,13 +90,13 @@ $typography-styles: (
 @font-face {
   font-family: "Georgia";
   src:
-    url("../../fonts/georgia-regular.woff2") format("woff"),
-    url("../../fonts/georgia-bold.woff2") format("woff");
+    url("../fonts/georgia-regular.woff2") format("woff"),
+    url("../fonts/georgia-bold.woff2") format("woff");
 }
 
 @font-face {
   font-family: "Arial";
-  src: url("../../fonts/arial-regular.woff2") format("woff");
+  src: url("../fonts/arial-regular.woff2") format("woff");
   font-weight: 400;
   font-style: normal;
 }
