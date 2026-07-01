@@ -113,9 +113,26 @@
       }
     }
     .pets__cards_catalog {
+      @include grid();
       width: 100%;
       padding: $padding-animals;
-      @include grid();
+      opacity: 1;
+      transform: translateX(0);
+      &.slide-left-out {
+        animation: slideLeftOut 0.35s ease forwards;
+      }
+
+      &.slide-left-in {
+        animation: slideLeftIn 0.35s ease forwards;
+      }
+
+      &.slide-right-out {
+        animation: slideRightOut 0.35s ease forwards;
+      }
+
+      &.slide-right-in {
+        animation: slideRightIn 0.35s ease forwards;
+      }
       @media (max-width: $tablet) {
         padding: 0;
       }
@@ -185,5 +202,53 @@
 
   &.disabled img {
     opacity: 0.4;
+  }
+}
+
+@keyframes slideLeftOut {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slideLeftIn {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideRightOut {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+@keyframes slideRightIn {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }

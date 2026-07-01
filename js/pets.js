@@ -14,6 +14,7 @@ let pets = [];
 let finalPetsList = [];
 let cardsPerPage = getCardsPetsCount();
 let currentPage = 1;
+let isAnimating = false;
 
 function shuffle(list) {
   const copy = [...list];
@@ -51,6 +52,39 @@ function renderPetsPage() {
   updateButtonsState();
 }
 
+function changePage(direction) {
+  if (isAnimating) return;
+
+  isAnimating = true;
+
+  const outClass = direction === "next" ? "slide-left-out" : "slide-right-out";
+
+  const inClass = direction === "next" ? "slide-left-in" : "slide-right-in";
+
+  petsContainer.classList.add(outClass);
+
+  petsContainer.addEventListener(
+    "animationend",
+    () => {
+      petsContainer.classList.remove(outClass);
+
+      renderPetsPage();
+
+      petsContainer.classList.add(inClass);
+
+      petsContainer.addEventListener(
+        "animationend",
+        () => {
+          petsContainer.classList.remove(inClass);
+          isAnimating = false;
+        },
+        { once: true },
+      );
+    },
+    { once: true },
+  );
+}
+
 function updateButtonsState() {
   const isFirstPage = currentPage === 1;
   const isLastPage = currentPage === getTotalPages();
@@ -66,7 +100,7 @@ function nextPage() {
   if (currentPage >= getTotalPages()) return;
 
   currentPage++;
-  renderPetsPage();
+  changePage("next");
 }
 
 function prevPage() {
@@ -74,21 +108,21 @@ function prevPage() {
   if (currentPage <= 1) return;
 
   currentPage--;
-  renderPetsPage();
+  changePage("prev");
 }
 
 function firstPage() {
   if (prevAllButton.classList.contains("disabled")) return;
 
   currentPage = 1;
-  renderPetsPage();
+  changePage("prev");
 }
 
 function lastPage() {
   if (nextAllButton.classList.contains("disabled")) return;
 
   currentPage = getTotalPages();
-  renderPetsPage();
+  changePage("next");
 }
 
 async function initPetsPage() {
