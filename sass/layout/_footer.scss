@@ -1,0 +1,63 @@
+.footer {
+  background:
+    url(../img/noise_transparent@2x.png),
+    radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%),
+    #211f20;
+  .footer__wrapper {
+    max-width: $max-width-1200;
+    margin: $margin-center;
+    @media (max-width: $mobile) {
+      max-width: $max-width-300;
+    }
+  }
+}
+.footer__content {
+  padding-top: $padding-footer;
+  @include flex($gap: 160px);
+  @media (max-width: $tablet) {
+    @include flex($gap: 60px);
+    padding-top: 35px;
+  }
+  @media (max-width: $mobile) {
+    @include flex($gap: 40px);
+    padding-top: 30px;
+  }
+  .footer__table_contact {
+    @include flex($align: start, $flex: column, $gap: 40px);
+    @media (max-width: $mobile) {
+      @include flex($flex: column, $gap: 40px);
+    }
+  }
+  .footer__table_location {
+    @include flex($align: start, $flex: column, $gap: 31px);
+    @media (max-width: $mobile) {
+      @include flex($align: start, $flex: column, $gap: 40px);
+    }
+  }
+}
+.footer__title {
+  @include font("h3");
+  color: $color-text-white;
+  max-width: 279px;
+  @media (max-width: $mobile) {
+    @include font("h3-mobile");
+  }
+}
+.footer__card {
+  @include flex($gap: 20px);
+  &:hover {
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+  }
+  .footer__text {
+    font-family: $font-family-title;
+    font-weight: $font-weight;
+    font-size: $font-size-h4;
+    letter-spacing: $letter-spacing;
+    color: $color-text-black;
+    line-height: $line-height-h4;
+    color: $color-primary;
+    text-decoration: $text-decoration;
+  }
+}

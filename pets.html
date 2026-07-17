@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./sass/style.css" />
+    <link rel="icon" type="image/jpg" href="./img/about-pets.jpg" />
+    <title>Pets</title>
+  </head>
+  <body>
+    <!-- Header start -->
+    <div class="pets__wrapper">
+      <header class="header__pets">
+        <div class="pets__container">
+          <a href="index.html" class="pets__logo">
+            <h1 class="pets__title">cozy House</h1>
+            <span class="pets__subtitle">shelter for pets in Boston</span>
+          </a>
+          <nav class="nav__pets">
+            <ul class="pets__items">
+              <li class="pets__item">
+                <a href="./index.html#about" class="pets__link"
+                  >about the shelter</a
+                >
+              </li>
+              <li class="pets__item is-active">
+                <a href="pets.html" class="pets__link">our pets</a>
+              </li>
+              <li class="pets__item">
+                <a href="./index.html#help" class="pets__link"
+                  >help the shelter</a
+                >
+              </li>
+              <li class="pets__item">
+                <a href="#footer" class="pets__link">contacts</a>
+              </li>
+            </ul>
+          </nav>
+          <button
+            class="hamburger hamburger__pets"
+            type="button"
+            aria-label="Open menu"
+            aria-expanded="false"
+          >
+            <span class="hamburger__line"></span>
+          </button>
+        </div>
+      </header>
+    </div>
+    <!-- Header end -->
+    <!-- Main start -->
+    <main class="main">
+      <section class="animals">
+        <div class="animals__content main__content">
+          <h2 class="pets__heading main__title">
+            our friends who<br />are looking for a house
+          </h2>
+          <dialog id="modal">
+            <div id="close__modal" class="close__modal">
+              <span class="close__modal-line"></span>
+            </div>
+            <div id="modal__content" class="modal__content"></div>
+          </dialog>
+          <div class="pets__cards pets__cards_catalog"></div>
+          <div class="animals__buttons">
+            <div class="animals__button animals__button_left-all">
+              <img src="./img/buttons/btn-all-rigth.svg" alt="btn-all-left" />
+            </div>
+            <div class="animals__button animals__button_left">
+              <img src="./img/buttons/btn-right.svg" alt="btn-left" />
+            </div>
+            <div class="animals__button page__indicator"></div>
+            <div class="animals__button animals__button_right">
+              <img src="./img/buttons/btn-right.svg" alt="btn-right" />
+            </div>
+            <div class="animals__button animals__button_right-all">
+              <img src="./img/buttons/btn-all-rigth.svg" alt="btn-all-right" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Main end -->
+    <!-- Footer start -->
+    <footer class="footer" id="footer">
+      <div class="footer__wrapper">
+        <div class="footer__content">
+          <div class="footer__table footer__table_contact">
+            <h3 class="footer__title">for questions and suggestions</h3>
+            <div class="footer__mail footer__card">
+              <img
+                src="./img/svg/icon-email.svg"
+                alt="icon-email"
+                class="footer__images"
+              />
+              <a href="mailto:email@shelter.com" class="footer__text"
+                >email@shelter.com</a
+              >
+            </div>
+            <div class="footer__phone footer__card">
+              <img
+                src="./img/svg/icon-phone.svg"
+                alt="icon-phone"
+                class="footer__images"
+              />
+              <a href="tel:+136745677554" class="footer__text"
+                >+13 674 567 75 54</a
+              >
+            </div>
+          </div>
+          <div class="footer__table footer__table_location">
+            <h3 class="footer__title">we are waiting for your visit</h3>
+            <div class="footer__boston footer__card">
+              <img
+                src="./img/svg/icon-marker.svg"
+                alt="icon-marker"
+                class="footer__images"
+              />
+              <a
+                href="https://maps.google.com/?q=1+Central+Street,+Boston"
+                class="footer__text"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                1 Central Street, Boston<br />(entrance from the store)
+              </a>
+            </div>
+            <div class="footer__london footer__card">
+              <img
+                src="./img/svg/icon-marker.svg"
+                alt="icon-marker"
+                class="footer__images"
+              />
+              <a
+                href="https://maps.google.com/?q=18+South+Park,+London"
+                class="footer__text"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                18 South Park, London
+              </a>
+            </div>
+          </div>
+          <div class="footer__image">
+            <img
+              src="./img/footer-puppy.png"
+              alt="footer-puppy"
+              class="footer__image_puppy"
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="./js/pets.js"></script>
+  </body>
+</html>

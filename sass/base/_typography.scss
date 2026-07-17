@@ -1,0 +1,102 @@
+// font
+$font-family-title: "Georgia", "Arial", sans-serif;
+$font-family-subtitle: "Arial", "Georgia", sans-serif;
+$font-style: italic;
+$font-size-h2: 45px;
+$font-size-h3: 35px;
+$font-size-h3-mobile: 25px;
+$font-size-h4: 20px;
+$font-size-h5: 15px;
+$font-size-but: 17px;
+$font-size-logo: 32px;
+$line-height-h3: 130%;
+$line-height-h4: 115%;
+$line-height-h5: 160%;
+$line-height-logo: 110%;
+$letter-spacing: 0.06em;
+$font-weight: 400;
+$text-align: center;
+$text-transform: uppercase;
+$text-decoration: none;
+
+$typography-styles: (
+  "h2": (
+    "font-family": $font-family-title,
+    "font-size": $font-size-h2,
+    "font-weight": $font-weight,
+    "line-height": $line-height-h3,
+  ),
+  "h3": (
+    "font-family": $font-family-title,
+    "font-size": $font-size-h3,
+    "font-weight": $font-weight,
+    "line-height": $line-height-h3,
+    "letter-spacing": $letter-spacing,
+  ),
+  "h3-mobile": (
+    "font-family": $font-family-title,
+    "font-size": $font-size-h3-mobile,
+    "font-weight": $font-weight,
+    "line-height": $line-height-h3,
+    "letter-spacing": $letter-spacing,
+    "text-align": $text-align,
+  ),
+  "h4": (
+    "font-family": $font-family-title,
+    "font-size": $font-size-h4,
+    "font-weight": $font-weight,
+    "letter-spacing": $letter-spacing,
+    "text-align": $text-align,
+  ),
+  "h5": (
+    "font-family": $font-family-subtitle,
+    "font-size": $font-size-h5,
+    "font-weight": $font-weight,
+    "line-height": $line-height-h5,
+  ),
+  "h5-mobile": (
+    "font-family": $font-family-title,
+    "font-size": $font-size-h5,
+    "font-weight": $font-weight,
+    "line-height": $line-height-logo,
+    "letter-spacing": $letter-spacing,
+    "text-align": $text-align,
+  ),
+  "button": (
+    "font-family": $font-family-title,
+    "font-size": $font-size-but,
+    "font-weight": $font-weight,
+    "line-height": $line-height-h3,
+    "letter-spacing": $letter-spacing,
+  ),
+  "logo": (
+    "font-family": $font-family-title,
+    "font-size": $font-size-logo,
+    "font-weight": $font-weight,
+    "line-height": $line-height-logo,
+    "letter-spacing": $letter-spacing,
+  ),
+  "h5-modal": (
+    "font-family": $font-family-title,
+    "font-size": $font-size-h5,
+    "font-weight": $font-weight,
+    "line-height": $line-height-logo,
+    "letter-spacing": $letter-spacing,
+  ),
+);
+
+//@font-face
+
+@font-face {
+  font-family: "Georgia";
+  src:
+    url("../fonts/georgia-regular.woff2") format("woff"),
+    url("../fonts/georgia-bold.woff2") format("woff");
+}
+
+@font-face {
+  font-family: "Arial";
+  src: url("../fonts/arial-regular.woff2") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
